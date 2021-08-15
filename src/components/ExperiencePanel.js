@@ -54,17 +54,17 @@ function TabPanel(props) {
         <TabPanel value={value} index={0}>
             <div className="tabpanel">
                 <div className="item">
-                    <span className="job-title">Head of Marketing</span><span className="job-company"> // Q-Summit</span>
+                    <span className="job-title">Head of Marketing</span><span className="job-company"> &#47;&#47; Q-Summit</span>
                     <div className="job-time">April 2020 - June 2021</div>
                     <ul className="job-description">
-                        <li>Photography and Video Production for a Conference with > 1000 attendees</li>
+                        <li>Photography and Video Production for a Conference with over 1000 attendees</li>
                         <li>Social Media Management, mainly LinkedIn</li>
                         <li>Web and Marketing Analytics</li>
                         <li>Programming and maintainance of the Website</li>
                     </ul>
                 </div>
                 <div className="item">
-                    <span className="job-title">Intern Business Development and Marketing</span><span className="job-company"> // BASF</span>
+                    <span className="job-title">Intern Business Development and Marketing</span><span className="job-company"> &#47;&#47; BASF</span>
                     <div className="job-time">March 2021 - June 2021</div>
                     <ul className="job-description">
                         <li>Online and offline marketing campaigns</li>
@@ -78,21 +78,21 @@ function TabPanel(props) {
         <TabPanel value={value} index={1}>
             <div className="tabpanel">
                 <div className="item">
-                    <span className="job-title">Commerce</span><span className="job-company"> // Queen's University, Kingston, Canada</span>
+                    <span className="job-title">Commerce</span><span className="job-company"> &#47;&#47; Queen's University, Kingston, Canada</span>
                     <div className="job-time">Starting September 2021</div>
                     <div className="job-description">
                         I'm currently an exchange student at Smith School of Business, where I focus on Management and Data Science topics
                     </div>
                 </div>
                 <div className="item">
-                    <span className="job-title">Business Administration</span><span className="job-company"> // University of Mannheim, Germany</span>
+                    <span className="job-title">Business Administration</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">Since September 2019</div>
                     <div className="job-description">
                         I am a Business Administration major with a special interest in Finance, Marketing, Statistics and Information Systems
                     </div>
                 </div>
                 <div className="item">
-                    <span className="job-title">Computer Science</span><span className="job-company"> // RWTH Aachen, Germany</span>
+                    <span className="job-title">Computer Science</span><span className="job-company"> &#47;&#47; RWTH Aachen, Germany</span>
                     <div className="job-time">October 2018 - August 2019</div>
                     <div className="job-description">
                         I studied two semesters of Computer Science, with coursework in Mathematics, Programming and Algorithmics before switching to Business Administration
@@ -103,11 +103,11 @@ function TabPanel(props) {
         <TabPanel value={value} index={2}>
             <div className="tabpanel">
                 <div className="item">
-                    <span className="job-title">Analyzing Data with SQL</span><span className="job-company"> // Codeacademy</span>
+                    <span className="job-title">Analyzing Data with SQL</span><span className="job-company"> &#47;&#47; Codeacademy</span>
                     <div className="job-time">February 2021</div>
                 </div>
                 <div className="item">
-                    <span className="job-title">6.00.1x: Introduction to Computer Science and Programming Using Python</span><span className="job-company"> // edX</span>
+                    <span className="job-title">6.00.1x: Introduction to Computer Science and Programming Using Python</span><span className="job-company"> &#47;&#47; edX</span>
                     <div className="job-time">September 2017</div>
                 </div>
             </div>

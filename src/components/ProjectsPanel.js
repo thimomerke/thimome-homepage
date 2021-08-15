@@ -38,7 +38,7 @@ const ProjectsPanel = () => {
                     {project.techs}
                   </Typography>
                   <Typography className="projectLinks">
-                    <a href={project.github} className="github fa fa-github" style={{fontSize: '24px'}}></a>
+                    <a href={project.github} className="github fa fa-github" style={{fontSize: '24px'}}> </a>
                   </Typography>
                 </CardContent>
               </Card>

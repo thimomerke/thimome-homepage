@@ -15,8 +15,8 @@ class Footer extends Component {
                 <a href="/legal"> legal notice</a>
                 </Col>
                 <Col className="justify-content-md-center">
-                <a className="fa fa-instagram social symbol" style={{fontSize: "24px"}} href="https://instagram.com/thimo_me" />
-                <a className="fa fa-linkedin social symbol" style={{fontSize: "24px"}} href="https://www.linkedin.com/in/thimo-merke/" />
+                    <a className="fa fa-instagram social symbol" style={{fontSize: "24px"}} href="https://instagram.com/thimo_me"> </a>
+                    <a className="fa fa-linkedin social symbol" style={{fontSize: "24px"}} href="https://www.linkedin.com/in/thimo-merke/"> </a>
                 </Col>
             </Row>
           </Container>
