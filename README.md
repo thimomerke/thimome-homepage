@@ -26,6 +26,7 @@ The default colors and fonts are as follows:
 | Font Text                  | ['Arial', sans-serif](https://via.placeholder.com/10/ccd6f6?text=+)      |
 | Font Weight Headings       | 600                                                                      |
 | Font Weight Content        | 400                                                                      |
+
 I also integrated the used of icons through Font Awesome, which can be used by placing the following snippet:
 `<i className="fa fa-{REPLACE BY ICON NAME}" style={{fontSize: {ADJUST ICON SIZE}}}> </i>`
 or using `<a>` for a link icon:
