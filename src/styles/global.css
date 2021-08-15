@@ -1,0 +1,54 @@
+:root {
+  --background: #fffff;
+  --contrast: #F30067;
+  --contrast1: #00D1CD;
+  --contrast2: black;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-text: 'Arial', sans-serif;
+}
+
+.app{
+  background-color: var(--background) !important;
+}
+
+.section{
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  margin-left: 0% !important;
+  color: var(--contrast2);
+}
+.section-heading{
+  font-size: 3rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  max-width: 100%;
+  color: var(--contrast);
+}
+.section-content{
+  margin-top: 2vh !important;
+  max-width: 100%;
+  font-size: 1.1rem;
+  font-family: var(--font-text);
+  font-weight: 100;
+}
+@media only screen and (max-width: 768px) {
+  .section{
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    width: 95%;
+  }
+  .section-heading{
+      margin-left: 5% !important;
+  }
+  .section-content{
+      margin-left: 5% !important;
+  }
+}
+
+a{
+  color: var(--contrast1);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--contrast) !important;
+}

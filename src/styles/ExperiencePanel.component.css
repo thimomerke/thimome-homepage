@@ -1,0 +1,74 @@
+.tab{
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    padding: 0px !important;
+    padding-right: 1vh !important;
+    min-width: 0px !important;
+}
+.tab:hover{
+    color: var(--contrast) !important;
+}
+.tabpanel{
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    color: var(--contrast) !important;
+}
+.item{
+    margin-bottom: 2vh;
+    max-width: 50%;
+}
+.job-title{
+    font-size: 1.2rem;
+    color: var(--contrast) !important;
+}
+.job-company{
+    font-size: 1.2rem;
+    color: var(--contrast2) !important;
+}
+.job-time{
+    font-size: 0.9rem;
+    color: var(--contrast2) !important;
+}
+.job-description{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.5vh;
+    color: var(--contrast2) !important;
+}
+.MuiTab-wrapper {
+    font-size: 16px;
+    text-align: left;
+    align-items: flex-start !important;
+}
+.MuiBox-root{
+    margin-top: 1vh;
+    padding: 0px !important;
+}
+.MuiTabs-indicator{
+    display: none !important;
+}
+.MuiButtonBase-root:focus {
+    color: var(--contrast) !important;
+}
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+ul li::before {
+    content: "\2022" !important;  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--contrast1); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+@media only screen and (max-width: 1024px) {
+    .item{
+        max-width: inherit;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .item{
+        margin-bottom: 2vh;
+    }
+}

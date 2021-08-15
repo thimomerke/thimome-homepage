@@ -1,0 +1,52 @@
+.projectsPanel{
+    display: flex;
+}
+.projectCard{
+    margin-left: 1vh;
+    margin-right: 1vh;
+    margin-bottom: 2vh;
+    height: auto;
+    width: 390px !important;
+    border-color: var(--contrast1) !important;
+    border-width: 2.5px !important;
+}
+.projectTitle{
+    font-family: var(--font-heading) !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: var(--contrast);
+}
+.projectDesc{
+    font-family: var(--font-text) !important;
+    font-size: 0.9rem !important;
+    color: var(--contrast2);
+    height: 100px;
+    margin-top: 1vh !important;
+    margin-bottom: 50px !important;
+}
+.projectTechs{
+    font-family: var(--font-text) !important;
+    font-size: 0.9rem !important;
+    color: var(--contrast2);
+    margin-top: 2vh !important;
+}
+.projectLinks{
+    margin-top: 0.5vh !important;
+}
+.MuiCardContent-root{
+    padding: 20px !important;
+}
+@media only screen and (max-width: 1200px) {
+    .projectDesc{
+        height: auto;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .projectsPanel{
+        display: block;
+    }
+    .projectCard{
+        width: inherit;
+        margin-bottom: 2vh;
+    }
+}
