@@ -28,7 +28,11 @@ The default colors and fonts are as follows:
 | Font Weight Content        | 400                                                                      |
 
 I also integrated the used of icons through Font Awesome, which can be used by placing the following snippet:
+
 `<i className="fa fa-{REPLACE BY ICON NAME}" style={{fontSize: {ADJUST ICON SIZE}}}> </i>`
+
 or using `<a>` for a link icon:
+
 `<a className="fa fa-{REPLACE BY ICON NAME}" style={{fontSize: {ADJUST ICON SIZE}}} href={LINK}"> </a>`
+
 It is **important** to keep the whitespace, otherwise you will get an error during ```npm run build``` because of an empty `<i>` / `<a>`
