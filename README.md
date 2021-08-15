@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# thimo.me
+My personal homepage [thimo.me](https://thimo.me), created with [Create React App](https://github.com/facebook/create-react-app) using React Bootstrap and Material UI.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Install and run this app
 
-## Available Scripts
+**Step 1:** Clone this repository
+`git clone https://github.com/thimomerke/thimome-homepage.git`
 
-In the project directory, you can run:
+**Step 2:** Install the dependencies
+`npm install`
 
-### `yarn start`
+**Step 3:** Run the app
+`npm start dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Adjusting the color and font scheme
+The color and font scheme can be adjusted by modifying the `:root` section in the global.css file inside the styles folder.
+Fonts are imported from Google fonts in the `Home.js` file, the weight values to be imported are specified in the import URL.
+The default colors and fonts are as follows:
+|                            | Default Value                                                            |
+| -------------------------- | -------------------------------------------------------------------------|
+| Background Color           | ![ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff`        |
+| Contrast Color 1           | ![F30067](https://via.placeholder.com/10/F30067?text=+) `#F30067`        |
+| Contrast Color 2           | ![00D1CD](https://via.placeholder.com/10/00D1CD?text=+) `#00D1CD`        |
+| Text Color                 | ![000000](https://via.placeholder.com/10/00000?text=+) `#000000`         |
+| Font Headings              | ['Montserrat', sans-serif](https://via.placeholder.com/10/a8b2d1?text=+) |
+| Font Text                  | ['Arial', sans-serif](https://via.placeholder.com/10/ccd6f6?text=+)      |
+| Font Weight Headings       | 600                                                                      |
+| Font Weight Content        | 400                                                                      |
+I also integrated the used of icons through Font Awesome, which can be used by placing the following snippet:
+`<i className="fa fa-{REPLACE BY ICON NAME}" style={{fontSize: {ADJUST ICON SIZE}}}> </i>`
+or using `<a>` for a link icon:
+`<a className="fa fa-{REPLACE BY ICON NAME}" style={{fontSize: {ADJUST ICON SIZE}}} href={LINK}"> </a>`
+It is **important** to keep the whitespace, otherwise you will get an error during ```npm run build``` because of an empty `<i>` / `<a>`

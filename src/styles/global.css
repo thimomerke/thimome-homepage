@@ -5,6 +5,8 @@
   --contrast2: black;
   --font-heading: 'Montserrat', sans-serif;
   --font-text: 'Arial', sans-serif;
+  --font-weight-heading: 500;
+  --font-weight-content: 400;
 }
 
 .app{
@@ -20,7 +22,7 @@
 .section-heading{
   font-size: 3rem;
   font-family: var(--font-heading);
-  font-weight: 500;
+  font-weight: var(--font-weight-heading);
   max-width: 100%;
   color: var(--contrast);
 }
@@ -29,7 +31,7 @@
   max-width: 100%;
   font-size: 1.1rem;
   font-family: var(--font-text);
-  font-weight: 100;
+  font-weight: var(--font-weight-content);
 }
 @media only screen and (max-width: 768px) {
   .section{

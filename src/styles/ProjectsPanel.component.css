@@ -13,12 +13,13 @@
 .projectTitle{
     font-family: var(--font-heading) !important;
     font-size: 1.2rem !important;
-    font-weight: 600 !important;
+    font-weight: var(--font-weight-heading) !important;
     color: var(--contrast);
 }
 .projectDesc{
     font-family: var(--font-text) !important;
     font-size: 0.9rem !important;
+    font-weight: var(--font-weight-content) !important;
     color: var(--contrast2);
     height: 100px;
     margin-top: 1vh !important;

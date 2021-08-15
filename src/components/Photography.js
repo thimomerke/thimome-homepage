@@ -18,7 +18,7 @@ const sliderProperties = {
 class Photography extends Component {
     render() {
       return (
-        <div className="section" id="projects">
+        <div className="section" id="photography">
         <Container>
           <Row className="section-heading">
             <span>
