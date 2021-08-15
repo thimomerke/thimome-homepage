@@ -8,7 +8,7 @@ import '../styles/ProjectsPanel.component.css';
 const projects = [
   { id: 0, name: 'Team BaitMain Homepage', 
   desc: 'I act as a web developer and server administrator for the multi-gaming team BaitMain', 
-  techs: 'JavaScript, React / Next.JS, CSS', github: 'https://github.com/thimomerke/BaitmainHomepage-next'},
+  techs: 'JavaScript, React / Next.JS, CSS', github: 'https://github.com/thimomerke/BaitmainHomepage-next', deploy: 'https://baitmain.de'},
   { id: 1, name: 'GModPanel', 
   desc: 'Web Admin Panel for Garrys Mod. This panel allows you to monitor and control a Garrys Mod Server from the web, and is meant for usage with game modes such as Trouble in Terrorist Town.', 
   techs: 'PHP, CSS', github: 'https://github.com/thimomerke/GModPanel'},
@@ -38,7 +38,11 @@ const ProjectsPanel = () => {
                     {project.techs}
                   </Typography>
                   <Typography className="projectLinks">
-                    <a href={project.github} className="github fa fa-github" style={{fontSize: '24px'}}> </a>
+                    <a href={project.github} className="fa fa-github" style={{fontSize: '24px'}} target="_blank"> </a>
+                    {project.deploy 
+                      ? <a href={project.deploy} className="fa fa-window-maximize" style={{fontSize: '24px'}} target="_blank"> </a>
+                      : ''
+                    }
                   </Typography>
                 </CardContent>
               </Card>

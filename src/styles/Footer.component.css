@@ -1,11 +1,12 @@
 .footer{
     padding: 1vh;
+    max-width: 100%;
 }
 .symbol{
     margin-right: 10px;
 }
 @media only screen and (max-width: 768px) {
     .footer{
-        margin-left: 5% !important;
+        width: 95%;
     }
-  }
+}

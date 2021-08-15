@@ -1,5 +1,5 @@
 .home{
-    padding-top: 35vh;
+    padding-top: 18%;
     padding-bottom:40vh;
     margin-left: 0% !important;
     color: var(--contrast2);
@@ -8,26 +8,32 @@
     font-size: 4rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--font-weight-heading);
-    max-width: 100vw;
+    max-width: 85%;
     text-transform: uppercase;
 }
 .subheading{
     font-size: 1.8rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--font-weight-heading);
-    max-width: 65%;
+    max-width: 75%;
 }
 .name{
     color: var(--contrast);
     font-weight: 600;
     text-shadow: 3px 3px var(--contrast1);
 }
+@media only screen and (max-width: 1024px) {
+    .home{
+        padding-top: 25vh;
+    }
+}
 @media only screen and (max-width: 768px) {
     .heading{
-        margin-left: 5% !important;
+        font-size: 3.5rem;
     }
     .subheading{
-        margin-left: 5% !important;
+        font-size: 1.5rem;
+        max-width: 85%;
     }
     .home{
         padding-top: 10vh;

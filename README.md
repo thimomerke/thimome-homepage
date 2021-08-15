@@ -22,8 +22,8 @@ The default colors and fonts are as follows:
 | Contrast Color 1           | ![F30067](https://via.placeholder.com/10/F30067?text=+) `#F30067`        |
 | Contrast Color 2           | ![00D1CD](https://via.placeholder.com/10/00D1CD?text=+) `#00D1CD`        |
 | Text Color                 | ![000000](https://via.placeholder.com/10/00000?text=+) `#000000`         |
-| Font Headings              | ['Montserrat', sans-serif](https://via.placeholder.com/10/a8b2d1?text=+) |
-| Font Text                  | ['Arial', sans-serif](https://via.placeholder.com/10/ccd6f6?text=+)      |
+| Font Headings              | 'Montserrat', sans-serif                                                 |
+| Font Text                  | 'Arial', sans-serif                                                      |
 | Font Weight Headings       | 600                                                                      |
 | Font Weight Content        | 400                                                                      |
 

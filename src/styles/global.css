@@ -34,16 +34,13 @@
   font-weight: var(--font-weight-content);
 }
 @media only screen and (max-width: 768px) {
+  .container{
+    margin-left: 5%;
+  }
   .section{
     padding-top: 7vh;
     padding-bottom: 7vh;
     width: 95%;
-  }
-  .section-heading{
-      margin-left: 5% !important;
-  }
-  .section-content{
-      margin-left: 5% !important;
   }
 }
 

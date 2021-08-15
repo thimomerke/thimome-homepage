@@ -7,10 +7,10 @@ import '../styles/AboutMe.component.css';
 
 class AboutMe extends Component {
   render() {
-    const unima = "<a href='https://www.uni-mannheim.de'>University of Mannheim</a>"
-    const queens = "<a href='https://queensu.ca'>Queen's University</a>"
-    const linkedin = "<a href='https://www.linkedin.com/in/thimo-merke/'>LinkedIn</a>"
-    const email = "<a href='mailto:thimo.merke@queensu.ca'>thimo.merke@queensu.ca</a>"
+    const unima = "<a href='https://www.uni-mannheim.de' target='_blank'>University of Mannheim</a>"
+    const queens = "<a href='https://queensu.ca' target='_blank'>Queen's University</a>"
+    const linkedin = "<a href='https://www.linkedin.com/in/thimo-merke/' target='_blank'>LinkedIn</a>"
+    const email = "<a href='mailto:thimo.merke@queensu.ca' target='_blank'>thimo.merke@queensu.ca</a>"
     return (
       <div className="section" id="about">
         <Container>

@@ -6,7 +6,7 @@
     margin-right: 1vh;
     margin-bottom: 2vh;
     height: auto;
-    width: 390px !important;
+    width: 400px !important;
     border-color: var(--contrast1) !important;
     border-width: 2.5px !important;
 }
@@ -21,25 +21,29 @@
     font-size: 0.9rem !important;
     font-weight: var(--font-weight-content) !important;
     color: var(--contrast2);
-    height: 100px;
     margin-top: 1vh !important;
-    margin-bottom: 50px !important;
+    height: 8vh !important;
 }
 .projectTechs{
+    align-self: end !important;
     font-family: var(--font-text) !important;
     font-size: 0.9rem !important;
     color: var(--contrast2);
     margin-top: 2vh !important;
+    font-style: italic;
 }
 .projectLinks{
     margin-top: 0.5vh !important;
+}
+.fa {
+    margin-right: 10px;
 }
 .MuiCardContent-root{
     padding: 20px !important;
 }
 @media only screen and (max-width: 1200px) {
     .projectDesc{
-        height: auto;
+        height: 12vh !important;
     }
 }
 @media only screen and (max-width: 1024px) {
