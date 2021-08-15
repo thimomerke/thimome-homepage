@@ -38,9 +38,9 @@ const ProjectsPanel = () => {
                     {project.techs}
                   </Typography>
                   <Typography className="projectLinks">
-                    <a href={project.github} className="fa fa-github" style={{fontSize: '24px'}} target="_blank"> </a>
+                    <a href={project.github} className="fa fa-github" style={{fontSize: '24px'}} target="_blank" rel="noreferrer"> </a>
                     {project.deploy 
-                      ? <a href={project.deploy} className="fa fa-window-maximize" style={{fontSize: '24px'}} target="_blank"> </a>
+                      ? <a href={project.deploy} className="fa fa-window-maximize" style={{fontSize: '24px'}} target="_blank" rel="noreferrer"> </a>
                       : ''
                     }
                   </Typography>

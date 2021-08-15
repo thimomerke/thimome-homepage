@@ -36,7 +36,7 @@ class Photography extends Component {
             <Col className="side-text">
                 I do all kinds of photography, but I mostly shoot travel and street photos.
                 I work with both digital and analog cameras. You can find more of my photography on my photo instagram:
-                <a href="https://www.instagram.com/thimo.merke/" target="_blank"> instagram.com/thimo.merke</a>
+                <a href="https://www.instagram.com/thimo.merke/" target="_blank" rel="noreferrer"> instagram.com/thimo.merke</a>
             </Col>
           </Row>
         </Container>
