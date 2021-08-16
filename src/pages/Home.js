@@ -1,10 +1,8 @@
-import TopNavbar from '../components/TopNavbar.js'
 import Top from '../components/Top.js'
 import AboutMe from '../components/AboutMe.js'
 import Experience from '../components/Experience.js';
 import Projects from '../components/Projects.js';
 import Photography from '../components/Photography.js';
-import Footer from '../components/Footer.js';
 import '../styles/global.css';
 
 function Home() {
@@ -21,7 +19,6 @@ function Home() {
         <Experience></Experience>
         <Projects></Projects>
         <Photography></Photography>
-        <Footer></Footer>
       </div>
     </div>
   );
