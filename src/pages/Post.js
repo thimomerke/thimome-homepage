@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import '../styles/Post.css'
 
-let folder = "https://res.cloudinary.com/thimome/raw/upload/v1629214213/thimome-blog/"
+let folder = "https://thimome-homepage.s3.eu-central-1.amazonaws.com/blog/" //change this to your own folder / aws bucket. this one will only work from my domain (thimo.me)
 //let folder = "/posts/"
 
 export default class Post extends Component {
