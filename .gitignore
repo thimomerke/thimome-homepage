@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+public/posts/test.md
+public/posts/test1.json
+public/posts/test2.json

@@ -5,24 +5,6 @@
     min-height: 92vh;
     color: var(--contrast2);
   }
-  .post-image{
-    margin-bottom: 2vh;
-  }
-  .post-image img{
-      max-width: 100%;
-  }
-  @media only screen and (max-width: 576px) {
-    .post-image img{
-        max-width: 90%;
-    }
-  }
-  .post-heading{
-    font-size: 3rem;
-    font-family: var(--font-heading);
-    font-weight: var(--font-weight-heading);
-    max-width: 100%;
-    color: var(--contrast);
-  }
   .post-content{
     margin-top: 2vh !important;
     max-width: 100%;
@@ -30,3 +12,25 @@
     font-family: var(--font-text);
     font-weight: var(--font-weight-content);
   }
+  .post-content img{
+    max-width: 100%;
+    max-height: 40vh;
+  }
+  .post-content h1{
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    max-width: 100%;
+    color: var(--contrast);
+  }
+  code{
+    color: #d63384 !important;
+  }
+@media only screen and (max-width: 576px) {
+  .post {
+    max-width: 95%;
+  }
+  .post-content img{
+      max-width: 90%;
+  }
+}

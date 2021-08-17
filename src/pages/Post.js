@@ -1,35 +1,37 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
-import Parser from 'html-react-parser';
 import Row from 'react-bootstrap/Row';
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import '../styles/Post.css'
-//import posts from '../posts/posts.json'
+
+let folder = "https://res.cloudinary.com/thimome/raw/upload/v1629214213/thimome-blog/"
+//let folder = "/posts/"
 
 export default class Post extends Component {
     constructor(props) {
         super(props);
      
         this.state = {
-            data: {
-                "slug":"",
-                "image":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/282/thinking-face_1f914.png",
-                "image_size":"200px",
-                "title":"How did you get here?",
-                "content":"Maybe you took a wrong turn? Anyways, there is nothing to see here"
-            }
+            content: "Loading..."
         }
     }
 
-    async getData(){
-        const res = await fetch(`/posts/${this.props.slug}.json`);
-        const data = await res.json();
-        return this.setState({data});
-     }
-
-    componentDidMount() {
-        this.getData();
-        console.log(this.state)
-    }
+    async componentDidMount() {
+      const articleId = this.props.slug;
+      const file = `${folder}${articleId}.md`;
+      const response = await fetch(file);
+      var text = "";
+      if (response.ok == true){
+        text = await response.text();
+      } else {
+      const file = `${folder}${articleId}.md`;
+        text = `# This is odd...  \n ### I'm not sure how you got here, did you take a wrong turn somewhere?`
+      }
+      this.setState({
+          content: text
+      })
+  }
 
     render() {
         console.log(this.state)
@@ -40,18 +42,9 @@ export default class Post extends Component {
       <main className="main">
       <section className="post">
       <Container>
-          <Row className="post-image">
-            <img alt="Post" style={{ width: this.state.data.image_size }} src={this.state.data.image} />
-          </Row>
-        <Row className="post-heading">
+        <Row className="post-content">
           <div>
-            {this.state.data.title}
-
-            </div>
-          </Row>
-          <Row className="post-content">
-          <div>
-          {Parser(this.state.data.content)}
+            <ReactMarkdown children={this.state.content} remarkPlugins={[remarkGfm]} />
             </div>
           </Row>
       </Container>
