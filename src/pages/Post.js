@@ -22,10 +22,9 @@ export default class Post extends Component {
       const file = `${folder}${articleId}.md`;
       const response = await fetch(file);
       var text = "";
-      if (response.ok == true){
+      if (response.ok === true){
         text = await response.text();
       } else {
-      const file = `${folder}${articleId}.md`;
         text = `# This is odd...  \n ### I'm not sure how you got here, did you take a wrong turn somewhere?`
       }
       this.setState({
