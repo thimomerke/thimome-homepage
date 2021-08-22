@@ -32,8 +32,8 @@ const Main = () => {
       <TopNavbar></TopNavbar>
       <Switch> {/* The Switch decides which component to show based on the current URL.*/}
         <Route exact path='/' component={Home}></Route>
-        <Route exact path='/legal' component={Legal}></Route>
-        <Route exact path='/posts' component={Posts}></Route>
+        <Route exact path='/legal/' component={Legal}></Route>
+        <Route exact path='/posts/' component={Posts}></Route>
         <Route path="/posts/:slug">
           <BlogPost/>
         </Route>
