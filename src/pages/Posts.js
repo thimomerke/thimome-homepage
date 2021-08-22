@@ -6,9 +6,6 @@ import '../styles/Posts.css';
 
 let articleIDs = [];
 
-
-console.log(process.env);
-
 AWS.config.update({ accessKeyId: process.env.REACT_APP_ACCESS_KEY_ID, secretAccessKey: process.env.REACT_APP_SECRET_ACCESS_KEY, region: process.env.REACT_APP_REGION });
 const s3 = new AWS.S3();
 const params = {
