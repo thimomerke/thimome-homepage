@@ -1,22 +1,26 @@
 .post{
     padding-top: 5vh;
-    padding-bottom: 15vh;
+    padding-bottom: 5vh;
     margin-left: 0% !important;
     min-height: 92vh;
     color: var(--contrast2);
   }
+  .row {
+    --bs-gutter-x: 0;
+  }
   .post-content{
-    margin-top: 2vh !important;
+    margin-top: 1vh !important;
     max-width: 100%;
     font-size: 1.1rem;
     font-family: var(--font-text);
     font-weight: var(--font-weight-content);
   }
-  .post-content img{
+  .post-image img{
     max-width: 100%;
     max-height: 40vh;
   }
-  .post-content h1{
+  .post-headline{
+    margin-top: 1vh;
     font-size: 3rem;
     font-family: var(--font-heading);
     font-weight: var(--font-weight-heading);

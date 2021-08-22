@@ -1,0 +1,7 @@
+.post{
+    min-height: 10vh !important;
+    overflow:hidden
+}
+.postlist img{
+    max-height: 20vh !important;
+}

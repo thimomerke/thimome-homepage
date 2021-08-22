@@ -8,11 +8,18 @@ import '../styles/Post.css'
 let folder = "https://thimome-homepage.s3.eu-central-1.amazonaws.com/blog/" //change this to your own folder / aws bucket. this one will only work from my domain (thimo.me)
 //let folder = "/posts/"
 
+let image = ""
+let headline = "# This is odd...";
+let content = "### I'm not sure how you got here, did you take a wrong turn somewhere?"
+
+
 export default class Post extends Component {
     constructor(props) {
         super(props);
      
         this.state = {
+            image: "",
+            headline: "",
             content: "Loading..."
         }
     }
@@ -24,11 +31,21 @@ export default class Post extends Component {
       var text = "";
       if (response.ok === true){
         text = await response.text();
-      } else {
-        text = `# This is odd...  \n ### I'm not sure how you got here, did you take a wrong turn somewhere?`
+        text = text.split('\n');
+        image = text[0];
+        headline = text[1];
+        text.splice(0,3);
+        content = text.join('\n');
       }
+
+      if (this.props.preview){
+        content = content.split('\n').slice(0, 10).join('\n');
+      }
+
       this.setState({
-          content: text
+          image: image,
+          headline: headline,
+          content: content
       })
   }
 
@@ -41,6 +58,18 @@ export default class Post extends Component {
       <main className="main">
       <section className="post">
       <Container>
+        <Row className="post-image">
+        {this.props.preview === "true" 
+          ? <a href={this.props.slug}><img src={this.state.image} alt="main header"/></a>
+          : <div><img src={this.state.image} alt="main header"/></div>
+        }
+        </Row>
+        <Row className="post-headline">
+        {this.props.preview === "true" 
+          ? <a href={this.props.slug}>{this.state.headline}</a>
+          : this.state.headline
+        }
+        </Row>
         <Row className="post-content">
           <div>
             <ReactMarkdown children={this.state.content} remarkPlugins={[remarkGfm]} />
