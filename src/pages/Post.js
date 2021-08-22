@@ -59,13 +59,13 @@ export default class Post extends Component {
       <section className="post">
       <Container>
         <Row className="post-image">
-        {this.props.preview === "true" 
+        {this.props.preview 
           ? <a href={this.props.slug}><img src={this.state.image} alt="main header"/></a>
           : <div><img src={this.state.image} alt="main header"/></div>
         }
         </Row>
         <Row className="post-headline">
-        {this.props.preview === "true" 
+        {this.props.preview 
           ? <a href={this.props.slug}>{this.state.headline}</a>
           : this.state.headline
         }
