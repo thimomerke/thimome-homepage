@@ -6,9 +6,10 @@ import '../styles/Posts.css';
 
 let articleIDs = [];
 
+
 console.log(process.env);
 
-AWS.config.update({ accessKeyId: process.env.ACCESS_KEY_ID, secretAccessKey: process.env.SECRET_ACCESS_KEY, region: process.env.REGION });
+AWS.config.update({ accessKeyId: process.env.REACT_APP_ACCESS_KEY_ID, secretAccessKey: process.env.REACT_APP_SECRET_ACCESS_KEY, region: process.env.REACT_APP_REGION });
 const s3 = new AWS.S3();
 const params = {
  Bucket: 'thimome-homepage',
@@ -44,15 +45,16 @@ export default class Posts extends Component {
   }
     
     render() {
-        console.log(this.state.articleIDs);
+        
         if (this.state.loaded) {
         return (
           <Container className = "postlist">
+            
             {
               this.state.articleIDs.map(function(articleID){
                 return (
                   <Post slug={articleID} preview={true} />
-                 
+                  
                 )
               })
             }
