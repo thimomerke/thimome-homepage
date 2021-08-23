@@ -23,7 +23,7 @@ class AboutMe extends Component {
             <Col className="about-text">
                 <p>I'm a Business Student at the {Parser(unima)} and {Parser(queens)}.</p>
                 <p>My main interests are everything tech and entrepreneurship related. I do programming and web design, photography and videography.</p>
-                <p>In my free time, if I'm not at my PC, I like going hiking and working out.  Also, I'm a huge space nerd #OccupyMars</p>
+                <p>In my free time, if I'm not at my PC, I like going hiking, biking and working out. <br />Also, I'm a huge space nerd #OccupyMars</p>
                 <p>You want to talk? Let's connect on {Parser(linkedin)}, or just shoot me an e-mail at {Parser(email)}</p>
             </Col>
             <Col className="about-photo">

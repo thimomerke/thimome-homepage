@@ -8,9 +8,10 @@ import '../styles/Post.css'
 let folder = "https://thimome-homepage.s3.eu-central-1.amazonaws.com/blog/" //change this to your own folder / aws bucket. this one will only work from my domain (thimo.me)
 //let folder = "/posts/"
 
-let image = ""
+let image = "";
 let headline = "# This is odd...";
-let content = "### I'm not sure how you got here, did you take a wrong turn somewhere?"
+let date = "";
+let content = "### I'm not sure how you got here, did you take a wrong turn somewhere?";
 
 
 export default class Post extends Component {
@@ -20,6 +21,7 @@ export default class Post extends Component {
         this.state = {
             image: "",
             headline: "",
+            date: "",
             content: "Loading..."
         }
     }
@@ -34,7 +36,8 @@ export default class Post extends Component {
         text = text.split('\n');
         image = text[0];
         headline = text[1];
-        text.splice(0,3);
+        date = text[2];
+        text.splice(0,4);
         content = text.join('\n');
       }
 
@@ -45,7 +48,8 @@ export default class Post extends Component {
       this.setState({
           image: image,
           headline: headline,
-          content: content
+          content: content,
+          date: date
       })
   }
 
@@ -60,15 +64,18 @@ export default class Post extends Component {
       <Container>
         <Row className="post-image">
         {this.props.preview 
-          ? <a href={this.props.slug}><img src={this.state.image} alt="main header"/></a>
+          ? <a href={'/posts/' + this.props.slug}><img src={this.state.image} alt="main header"/></a>
           : <div><img src={this.state.image} alt="main header"/></div>
         }
         </Row>
         <Row className="post-headline">
         {this.props.preview 
-          ? <a href={this.props.slug}>{this.state.headline}</a>
+          ? <a href={'/posts/' + this.props.slug}>{this.state.headline}</a>
           : this.state.headline
         }
+        </Row>
+        <Row className="post-date">
+        {this.state.date}
         </Row>
         <Row className="post-content">
           <div>

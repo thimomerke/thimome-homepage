@@ -30,10 +30,10 @@ const Main = () => {
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <TopNavbar></TopNavbar>
-      <Switch> {/* The Switch decides which component to show based on the current URL.*/}
+      <Switch>
         <Route exact path='/' component={Home}></Route>
         <Route exact path='/legal/' component={Legal}></Route>
-        <Route exact path='/posts/' component={Posts}></Route>
+        <Route exact path='/posts' component={Posts}></Route>
         <Route path="/posts/:slug">
           <BlogPost/>
         </Route>

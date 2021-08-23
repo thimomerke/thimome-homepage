@@ -12,11 +12,12 @@ class TopNavbar extends Component {
           <Container>
             <Navbar.Collapse>
               <Nav>
-                <Nav.Link href="/#home">#home</Nav.Link>
+                <Nav.Link href="/">#home</Nav.Link>
                 <Nav.Link href="/#about">#about me</Nav.Link>
                 <Nav.Link href="/#experience">#experience</Nav.Link>
                 <Nav.Link href="/#projects">#coding</Nav.Link>
                 <Nav.Link href="/#photography">#photography</Nav.Link>
+                <Nav.Link href="/posts">#blog</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
