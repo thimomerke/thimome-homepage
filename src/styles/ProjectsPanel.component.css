@@ -2,8 +2,7 @@
     display: flex;
 }
 .projectCard{
-    margin-left: 1vh;
-    margin-right: 1vh;
+    margin-right: 2vh;
     margin-bottom: 2vh;
     height: auto;
     width: 400px !important;
@@ -43,7 +42,7 @@
 }
 @media only screen and (max-width: 1200px) {
     .projectDesc{
-        height: 12vh !important;
+        height: 100px !important;
     }
 }
 @media only screen and (max-width: 1024px) {
@@ -53,5 +52,6 @@
     .projectCard{
         width: inherit;
         margin-bottom: 2vh;
+        height: 250px;
     }
 }

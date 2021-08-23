@@ -1,11 +1,13 @@
 .photo-slider{
     width: 50% !important;
 }
-.side-text{
+.side-text{ 
     margin: auto !important;
+    margin-left: 25px !important;
 }
 @media only screen and (max-width: 768px) {
     .side-text{
         margin-top: 5% !important;
+        margin-left: 0px !important;
     }
 }
