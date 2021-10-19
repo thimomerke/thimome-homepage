@@ -17,7 +17,7 @@ class TopNavbar extends Component {
                 <Nav.Link href="/#experience">#experience</Nav.Link>
                 <Nav.Link href="/#projects">#coding</Nav.Link>
                 <Nav.Link href="/#photography">#photography</Nav.Link>
-                <Nav.Link href="/posts">#blog</Nav.Link>
+
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -28,3 +28,5 @@ class TopNavbar extends Component {
 }
 
 export default TopNavbar;
+
+    //<Nav.Link href="/posts">#blog</Nav.Link>

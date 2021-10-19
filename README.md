@@ -19,9 +19,9 @@ The default colors and fonts are as follows:
 |                            | Default Value                                                            |
 | -------------------------- | -------------------------------------------------------------------------|
 | Background Color           | ![ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff`        |
-| Contrast Color 1           | ![F30067](https://via.placeholder.com/10/F30067?text=+) `#F30067`        |
-| Contrast Color 2           | ![00D1CD](https://via.placeholder.com/10/00D1CD?text=+) `#00D1CD`        |
-| Text Color                 | ![000000](https://via.placeholder.com/10/00000?text=+) `#000000`         |
+| Contrast Color 1           | ![EEBD31](https://via.placeholder.com/10/EEBD31?text=+) `#EEBD31`        |
+| Contrast Color 2           | ![9D1939](https://via.placeholder.com/10/9D1939?text=+) `#9D1939`        |
+| Text Color                 | ![11335D](https://via.placeholder.com/10/11335D?text=+) `#11335D`         |
 | Font Headings              | 'Montserrat', sans-serif                                                 |
 | Font Text                  | 'Arial', sans-serif                                                      |
 | Font Weight Headings       | 600                                                                      |
@@ -34,5 +34,3 @@ I also integrated the used of icons through Font Awesome, which can be used by p
 or using `<a>` for a link icon:
 
 `<a className="fa fa-{REPLACE BY ICON NAME}" style={{fontSize: {ADJUST ICON SIZE}}} href={LINK}"> </a>`
-
-It is **important** to keep the whitespace, otherwise you will get an error during ```npm run build``` because of an empty `<i>` / `<a>`
