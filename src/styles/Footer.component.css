@@ -1,6 +1,7 @@
 .footer{
     padding: 1vh;
     max-width: 100%;
+    color: var(--contrast1)
 }
 .symbol{
     margin-right: 10px;

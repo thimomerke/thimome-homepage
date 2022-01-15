@@ -58,7 +58,7 @@ function TabPanel(props) {
                     <div className="job-time">April 2020 - June 2021</div>
                     <ul className="job-description">
                         <li>Photography and Video Production for a Conference with over 1000 attendees</li>
-                        <li>Social Media Management, mainly LinkedIn</li>
+                        <li>Social media management, mainly LinkedIn</li>
                         <li>Web and Marketing Analytics</li>
                         <li>Programming and maintainance of the Website</li>
                     </ul>
@@ -68,8 +68,8 @@ function TabPanel(props) {
                     <div className="job-time">March 2021 - June 2021</div>
                     <ul className="job-description">
                         <li>Online and offline marketing campaigns</li>
-                        <li>Social-Media Management, e.g. Instagram, Facebook, LinkedIn</li>
-                        <li>Marketing Analytics</li>
+                        <li>Social media management, e.g. Instagram, Facebook, LinkedIn</li>
+                        <li>Marketing analytics</li>
                         <li>Photography</li>
                     </ul>
                 </div>

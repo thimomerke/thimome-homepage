@@ -1,5 +1,5 @@
 .tab{
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: var(--font-heading) !important;
     font-weight: var(--font-weight-heading) !important;
     padding: 0px !important;
     padding-right: 1vh !important;
@@ -9,7 +9,7 @@
     color: var(--contrast) !important;
 }
 .tabpanel{
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: var(--font-heading) !important;
     font-weight: var(--font-weight-heading) !important;
     color: var(--contrast) !important;
 }
@@ -30,9 +30,8 @@
     color: var(--contrast2) !important;
 }
 .job-description{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: var(--font-weight-content) !important;
+    font-family: var(--font-text);
+    font-size: var(--font-size-content);
     margin-top: 0.5vh;
     color: var(--contrast2) !important;
 }

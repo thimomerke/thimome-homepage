@@ -1,5 +1,5 @@
 .navbar{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 600;
 }
 .nav-link{

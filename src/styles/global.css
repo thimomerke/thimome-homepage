@@ -1,12 +1,12 @@
 :root {
-  --background: #fffff;
-  --contrast: #eebd31;
-  --contrast1: #9d1939;
-  --contrast2: #11335d;
+  --background: #C3DFE0;
+  --contrast: #0B3954;
+  --contrast1: #9DAD6F;
+  --contrast2: #7D6D61;
   --font-heading: 'Montserrat', sans-serif;
-  --font-text: 'Arial', sans-serif;
+  --font-text: 'Calibri', sans-serif;
   --font-weight-heading: 500;
-  --font-weight-content: 400;
+  --font-size-content: 20px;
 }
 
 .app{
@@ -29,9 +29,8 @@
 .section-content{
   margin-top: 2vh !important;
   max-width: 100%;
-  font-size: 1.1rem;
   font-family: var(--font-text);
-  font-weight: var(--font-weight-content);
+  font-size: var(--font-size-content);
 }
 @media only screen and (max-width: 768px) {
   .container{

@@ -6,7 +6,8 @@
     margin-bottom: 2vh;
     height: auto;
     width: 400px !important;
-    border-color: var(--contrast1) !important;
+    border-color: var(--contrast) !important;
+    background-color: var(--background) !important;
     border-width: 2.5px !important;
 }
 .projectTitle{
@@ -17,18 +18,17 @@
 }
 .projectDesc{
     font-family: var(--font-text) !important;
-    font-size: 0.9rem !important;
-    font-weight: var(--font-weight-content) !important;
     color: var(--contrast2);
+    font-size: 1.1rem !important;
     margin-top: 1vh !important;
     height: 8vh !important;
 }
 .projectTechs{
     align-self: end !important;
     font-family: var(--font-text) !important;
-    font-size: 0.9rem !important;
     color: var(--contrast2);
-    margin-top: 2vh !important;
+    font-size: 1.1rem !important;
+    margin-top: 4vh !important;
     font-style: italic;
 }
 .projectLinks{
@@ -52,6 +52,6 @@
     .projectCard{
         width: inherit;
         margin-bottom: 2vh;
-        height: 250px;
+        height: auto;
     }
 }

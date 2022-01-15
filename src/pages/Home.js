@@ -2,7 +2,6 @@ import Top from '../components/Top.js'
 import AboutMe from '../components/AboutMe.js'
 import Experience from '../components/Experience.js';
 import Projects from '../components/Projects.js';
-import Photography from '../components/Photography.js';
 import '../styles/global.css';
 
 function Home() {
@@ -18,7 +17,6 @@ function Home() {
         <AboutMe></AboutMe>
         <Experience></Experience>
         <Projects></Projects>
-        <Photography></Photography>
       </div>
     </div>
   );
