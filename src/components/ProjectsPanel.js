@@ -18,6 +18,9 @@ const projects = [
   { id: 3, name: 'iPillPython', 
   desc: 'Operating script for the iPill, an automatic drug dispenser built as part of a school research project for the Jugend Forscht science fair', 
   techs: 'Python', github: 'https://github.com/thimomerke/iPillPython'},
+  { id: 4, name: 'SmartStandDash', 
+  desc: 'Dashboard for the smart alarm clock I am building, currently includes time, alarm and weather information', 
+  techs: 'JavaScript, HTML, CSS', github: 'https://github.com/thimomerke/nightstand-smart-dashboard'},
 ]
 
 const ProjectsPanel = () => {

@@ -1,48 +1,48 @@
 .projectsPanel{
     display: flex;
 }
-.projectCard{
+div .projectCard{
     margin-right: 2vh;
     margin-bottom: 2vh;
     height: auto;
-    width: 400px !important;
-    border-color: var(--contrast) !important;
-    background-color: var(--background) !important;
-    border-width: 2.5px !important;
+    width: 400px;
+    border-color: var(--contrast);
+    background-color: var(--background);
+    border-width: 2.5px;
 }
-.projectTitle{
-    font-family: var(--font-heading) !important;
-    font-size: 1.2rem !important;
-    font-weight: var(--font-weight-heading) !important;
+div .projectTitle{
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-heading);
     color: var(--contrast);
 }
-.projectDesc{
-    font-family: var(--font-text) !important;
+div .projectDesc{
+    font-family: var(--font-text);
     color: var(--contrast2);
-    font-size: 1.1rem !important;
-    margin-top: 1vh !important;
-    height: 8vh !important;
+    font-size: 1.1rem ;
+    margin-top: 1vh;
+    height: 8vh;
 }
-.projectTechs{
-    align-self: end !important;
-    font-family: var(--font-text) !important;
+div .projectTechs{
+    align-self: end;
+    font-family: var(--font-text);
     color: var(--contrast2);
-    font-size: 1.1rem !important;
-    margin-top: 4vh !important;
+    font-size: 1.1rem;
+    margin-top: 4vh;
     font-style: italic;
 }
-.projectLinks{
-    margin-top: 0.5vh !important;
+div .projectLinks{
+    margin-top: 0.5vh;
 }
 .fa {
     margin-right: 10px;
 }
-.MuiCardContent-root{
-    padding: 20px !important;
+div .MuiCardContent-root{
+    padding: 20px;
 }
 @media only screen and (max-width: 1200px) {
-    .projectDesc{
-        height: 100px !important;
+    div .projectDesc{
+        height: 150px;
     }
 }
 @media only screen and (max-width: 1024px) {

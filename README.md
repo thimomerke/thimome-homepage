@@ -18,13 +18,13 @@ Fonts are imported from Google fonts in the `Home.js` file, the weight values to
 The default colors and fonts are as follows:
 |                            | Default Value                                                            |
 | -------------------------- | -------------------------------------------------------------------------|
-| Background Color           | ![ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff`        |
-| Contrast Color 1           | ![EEBD31](https://via.placeholder.com/10/EEBD31?text=+) `#EEBD31`        |
-| Contrast Color 2           | ![9D1939](https://via.placeholder.com/10/9D1939?text=+) `#9D1939`        |
-| Text Color                 | ![11335D](https://via.placeholder.com/10/11335D?text=+) `#11335D`         |
+| Background Color           | ![faf7ef](https://via.placeholder.com/10/faf7ef?text=+) `#faf7ef`        |
+| Contrast Color 1           | ![fd4c4c](https://via.placeholder.com/10/fd4c4c?text=+) `#fd4c4c`        |
+| Contrast Color 2           | ![e9b000](https://via.placeholder.com/10/e9b000?text=+) `#e9b000`        |
+| Text Color                 | ![1a2238](https://via.placeholder.com/10/1a2238?text=+) `#1a2238`         |
 | Font Headings              | 'Montserrat', sans-serif                                                 |
-| Font Text                  | 'Arial', sans-serif                                                      |
-| Font Weight Headings       | 600                                                                      |
+| Font Text                  | 'Quicksand', sans-serif                                                      |
+| Font Weight Headings       | 500                                                                      |
 | Font Weight Content        | 400                                                                      |
 
 I also integrated the used of icons through Font Awesome, which can be used by placing the following snippet:

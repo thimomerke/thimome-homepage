@@ -10,7 +10,6 @@
 }
 .tabpanel{
     font-family: var(--font-heading) !important;
-    font-weight: var(--font-weight-heading) !important;
     color: var(--contrast) !important;
 }
 .item{
@@ -20,10 +19,12 @@
 .job-title{
     font-size: 1.2rem;
     color: var(--contrast) !important;
+    font-weight: var(--font-weight-heading) !important;
 }
 .job-company{
     font-size: 1.2rem;
     color: var(--contrast2) !important;
+    font-weight: var(--font-weight-heading) !important;
 }
 .job-time{
     font-size: 0.9rem;

@@ -11,7 +11,7 @@ class Footer extends Component {
           <Container>
           <Row className="links">
                 <Col>
-                <i className="fa fa-copyright symbol"></i>Thimo Merke 2022
+                <i className="fa fa-copyright symbol"></i>Thimo Merke {new Date().getFullYear()}
                 </Col>
                 <Col className="d-flex justify-content-center">
                     <a className="fa fa-instagram social symbol" style={{fontSize: "24px"}} href="https://instagram.com/thimo_me" target="_blank" rel="noreferrer"> </a>

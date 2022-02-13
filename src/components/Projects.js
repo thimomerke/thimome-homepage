@@ -11,7 +11,7 @@ class Projects extends Component {
         <Container>
           <Row className="section-heading">
             <span>
-              #software_projects
+              #software projects
             </span>
           </Row>
           <Row className="section-content">

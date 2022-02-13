@@ -4,8 +4,7 @@
 .about-photo img{
     max-width: 300px;
     height: auto;
-    border: 3px solid var(--contrast);
-    
+    border: 3px solid var(--contrast);  
 }
 @media only screen and (max-width: 768px) {
     .about-photo{

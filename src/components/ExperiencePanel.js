@@ -57,9 +57,9 @@ function TabPanel(props) {
                     <span className="job-title">Head of Marketing</span><span className="job-company"> &#47;&#47; Q-Summit</span>
                     <div className="job-time">April 2020 - June 2021</div>
                     <ul className="job-description">
-                        <li>Photography and Video Production for a Conference with over 1000 attendees</li>
+                        <li>Photography and video production for a Conference with over 1000 attendees</li>
                         <li>Social media management, mainly LinkedIn</li>
-                        <li>Web and Marketing Analytics</li>
+                        <li>Web and marketing analytics</li>
                         <li>Programming and maintainance of the Website</li>
                     </ul>
                 </div>

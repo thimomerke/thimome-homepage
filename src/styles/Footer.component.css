@@ -1,7 +1,9 @@
 .footer{
     padding: 1vh;
     max-width: 100%;
-    color: var(--contrast1)
+}
+.footer a{
+    color: var(--contrast2);
 }
 .symbol{
     margin-right: 10px;

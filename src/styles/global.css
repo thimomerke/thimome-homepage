@@ -1,10 +1,10 @@
 :root {
-  --background: #C3DFE0;
-  --contrast: #0B3954;
-  --contrast1: #9DAD6F;
-  --contrast2: #7D6D61;
+  --background: #faf7ef;
+  --contrast: #fd4c4c;
+  --contrast1: #e9b000;
+  --contrast2: #1A2238;
   --font-heading: 'Montserrat', sans-serif;
-  --font-text: 'Calibri', sans-serif;
+  --font-text: 'Quicksand', sans-serif;
   --font-weight-heading: 500;
   --font-size-content: 20px;
 }
