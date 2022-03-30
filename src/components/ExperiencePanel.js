@@ -77,18 +77,18 @@ function TabPanel(props) {
         </TabPanel>
         <TabPanel value={value} index={1}>
             <div className="tabpanel">
-                <div className="item">
-                    <span className="job-title">Commerce</span><span className="job-company"> &#47;&#47; Queen's University, Kingston, Canada</span>
-                    <div className="job-time">Starting September 2021</div>
-                    <div className="job-description">
-                        I'm currently an exchange student at Smith School of Business, where I focus on Management and Computing topics
-                    </div>
-                </div>
-                <div className="item">
+              <div className="item">
                     <span className="job-title">Business Administration</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">Since September 2019</div>
                     <div className="job-description">
                         I am a Business Administration major with a special interest in Information Systems, Finance and Marketing
+                    </div>
+                </div>
+                <div className="item">
+                    <span className="job-title">Commerce</span><span className="job-company"> &#47;&#47; Queen's University, Kingston, Canada</span>
+                    <div className="job-time">September 2021 - December 2021</div>
+                    <div className="job-description">
+                        I studied at Smith School of Business for one semester, where I focused on Management and Computing topics
                     </div>
                 </div>
                 <div className="item">
