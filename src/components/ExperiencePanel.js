@@ -54,6 +54,16 @@ function TabPanel(props) {
         <TabPanel value={value} index={0}>
             <div className="tabpanel">
                 <div className="item">
+                    <span className="job-title">Working Student Value Experience Innovation</span><span className="job-company"> &#47;&#47; SAP</span>
+                    <div className="job-time">Since October 2022</div>
+                    <ul className="job-description">
+                        I work on developing innovative customer experiences, including
+                        <li>the SAP Experience Centers Walldorf and NYC</li>
+                        <li>Value Storytelling</li>
+                        <li>Metaverse and Digital Innovation projects</li>
+                    </ul>
+                </div>
+                <div className="item">
                     <span className="job-title">Head of Marketing</span><span className="job-company"> &#47;&#47; Q-Summit</span>
                     <div className="job-time">April 2020 - June 2021</div>
                     <ul className="job-description">

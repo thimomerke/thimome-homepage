@@ -21,6 +21,8 @@
     "react-scripts": "^4.0.3",
     "react-slideshow-image": "^3.5.0",
     "remark-gfm": "^2.0.0",
+    "typeface-montserrat": "^1.1.13",
+    "typeface-quicksand": "^1.1.13",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

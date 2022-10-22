@@ -21,7 +21,7 @@
 }
 .section-heading{
   font-size: 3rem;
-  font-family: var(--font-heading);
+  font-family: 'Montserrat', sans-serif;
   font-weight: var(--font-weight-heading);
   max-width: 100%;
   color: var(--contrast);

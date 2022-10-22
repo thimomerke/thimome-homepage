@@ -21,6 +21,7 @@ div .projectDesc{
     color: var(--contrast2);
     font-size: 1.1rem ;
     margin-top: 1vh;
+    margin-bottom: 25%;
     height: 8vh;
 }
 div .projectTechs{
@@ -43,6 +44,7 @@ div .MuiCardContent-root{
 @media only screen and (max-width: 1200px) {
     div .projectDesc{
         height: 150px;
+        margin-bottom: auto;
     }
 }
 @media only screen and (max-width: 1024px) {
