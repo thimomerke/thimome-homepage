@@ -21,6 +21,9 @@ const projects = [
   { id: 4, name: 'SmartStandDash', 
   desc: 'Dashboard for the smart alarm clock I am building, currently includes time, alarm and weather information', 
   techs: 'JavaScript, HTML, CSS', github: 'https://github.com/thimomerke/nightstand-smart-dashboard'},
+  { id: 5, name: 'BaitGame', 
+  desc: '2D jump and run game in development with Team Baitmain using Unity and C# scripting', 
+  techs: 'Unity, C#', github: 'https://github.com/TeamBaitmain/2dgamefalldmg'},
 ]
 
 const ProjectsPanel = () => {
