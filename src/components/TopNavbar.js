@@ -16,7 +16,7 @@ class TopNavbar extends Component {
                 <Nav.Link href="/#about">#about me</Nav.Link>
                 <Nav.Link href="/#experience">#experience</Nav.Link>
                 <Nav.Link href="/#projects">#software projects</Nav.Link>
-                <Nav.Link href="https://photo.thimo.me">#photography</Nav.Link>
+                <Nav.Link href="https://www.instagram.com/thimo.merke/">#photography</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
