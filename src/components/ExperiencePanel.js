@@ -55,7 +55,7 @@ function TabPanel(props) {
             <div className="tabpanel">
                 <div className="item">
                     <span className="job-title">Working Student Value Experience Innovation</span><span className="job-company"> &#47;&#47; SAP</span>
-                    <div className="job-time">October 2022 - Juna 2023</div>
+                    <div className="job-time">October 2022 - June 2023</div>
                     <ul className="job-description">
                         I worked on developing innovative customer experiences, including
                         <li>the SAP Experience Centers Walldorf and NYC</li>
