@@ -20,8 +20,8 @@ class AboutMe extends Component {
           </Row>
           <Row className="section-content">
             <Col className="about-text">
-                <p>I'm a Business Student at the {Parser(unima)}.</p>
-                <p>My main interests are everything tech and entrepreneurship related. I also do some programming and web design, photo- and videography.</p>
+                <p>I'm a graduate business student at the {Parser(unima)}.</p>
+                <p>My main interests are everything tech, entrepreneurship and sustainability-related. I also do some programming and web design, photo- and videography.</p>
                 <p>In my free time, if I'm not at my PC, I like going hiking, biking and working out. <br />Also, I'm a huge space nerd #OccupyMars</p>
                 <p>You want to talk? Let's connect on {Parser(linkedin)}, or just shoot me an e-mail at {Parser(email)}</p>
             </Col>

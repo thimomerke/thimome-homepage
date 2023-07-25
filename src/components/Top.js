@@ -8,7 +8,7 @@ class Top extends Component {
     
     const title = "Welcome, I'm"
     const name = "Thimo"
-    const subtitle = "I'm a business student and part-time programmer and photographer from Mannheim, Germany."
+    const subtitle = "I'm a graduate student of business and management from Mannheim, Germany."
 
     return (
       <div className="home" id="home">

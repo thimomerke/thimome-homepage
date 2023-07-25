@@ -41,6 +41,7 @@ function TabPanel(props) {
 
     return (
         <div className="experiencepanel">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         <Tabs
           className="tabs"
           value={value}
@@ -87,18 +88,26 @@ function TabPanel(props) {
         </TabPanel>
         <TabPanel value={value} index={1}>
             <div className="tabpanel">
-              <div className="item">
-                    <span className="job-title">Business Administration</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
-                    <div className="job-time">Since September 2019</div>
+            <div className="item">
+                    <span className="job-title">M.Sc. Management</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
+                    <div className="job-time">Since September 2023</div>
                     <div className="job-description">
-                        I am a Business Administration major with a special interest in Information Systems, Finance and Marketing
+                        I continue my studies as a graduate student at the University of Mannheim
+                    </div>
+                </div>
+              <div className="item">
+                    <span className="job-title">B.Sc. Business Administration</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
+                    <div className="job-time">September 2019 - July 2023</div>
+                    <div className="job-description">
+                        I studied Business Administration with a special interest in Management, Finance and Decarbonization. My bachelor's thesis, "Examining the Viability of Net-Negative Carbon Removal
+Techniques: An Economic and Environmental Evaluation", can be found <a href="https://github.com/thimomerke/bachelor-thesis/blob/main/BachelorThesis061023.pdf" target="_blank" rel="noreferrer">here</a>
                     </div>
                 </div>
                 <div className="item">
                     <span className="job-title">Commerce</span><span className="job-company"> &#47;&#47; Queen's University, Kingston, Canada</span>
                     <div className="job-time">September 2021 - December 2021</div>
                     <div className="job-description">
-                        I studied at Smith School of Business for one semester, where I focused on Management and Computing topics
+                        I studied at Smith School of Business for one semester, where I focused on Management and Sustainability topics
                     </div>
                 </div>
                 <div className="item">

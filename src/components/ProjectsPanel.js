@@ -6,9 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import '../styles/ProjectsPanel.component.css';
 
 const projects = [
-  { id: 0, name: 'Team BaitMain Homepage', 
-  desc: 'I act as a web developer and server administrator for the multi-gaming team BaitMain', 
-  techs: 'JavaScript, React / Next.JS, CSS', github: 'https://github.com/thimomerke/BaitmainHomepage-next', deploy: 'https://baitmain.de'},
+  { id: 0, name: 'Travel Tracker', 
+  desc: 'App that allows you to track cities (and other places) you have visited and displays them on a map', 
+  techs: 'JavaScript, React, CSS', github: 'https://github.com/thimomerke/leaflet-travel-app'},
   { id: 1, name: 'GModPanel', 
   desc: 'Web Admin Panel for Garrys Mod. This panel allows you to monitor and control a Garrys Mod Server from the web, and is meant for usage with game modes such as Trouble in Terrorist Town.', 
   techs: 'PHP, CSS', github: 'https://github.com/thimomerke/GModPanel'},
@@ -24,6 +24,9 @@ const projects = [
   { id: 5, name: 'BaitGame', 
   desc: '2D jump and run game in development with Team Baitmain using Unity and C# scripting', 
   techs: 'Unity, C#', github: 'https://github.com/TeamBaitmain/2dgamefalldmg'},
+  { id: 6, name: 'Team BaitMain Homepage', 
+  desc: 'I act as a web developer and server administrator for the multi-gaming team BaitMain', 
+  techs: 'JavaScript, React / Next.JS, CSS', github: 'https://github.com/thimomerke/BaitmainHomepage-next', deploy: 'https://baitmain.de'},
 ]
 
 const ProjectsPanel = () => {
