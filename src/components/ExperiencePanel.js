@@ -55,6 +55,20 @@ function TabPanel(props) {
         <TabPanel value={value} index={0}>
             <div className="tabpanel">
                 <div className="item">
+                    <span className="job-title">Student Consultant and Project Leader</span><span className="job-company"> &#47;&#47; 180DC Mannheim</span>
+                    <div className="job-time">Since October 2023</div>
+                    <ul className="job-description">
+                        180DC is the world's largest university-based consultancy for nonprofits and social enterprises. As a project leader, I manage a consulting project in the carbon removal industry.
+                    </ul>
+                </div>
+                <div className="item">
+                    <span className="job-title">Student Researcher</span><span className="job-company"> &#47;&#47; University of Mannheim / MISES</span>
+                    <div className="job-time">Since October 2023</div>
+                    <ul className="job-description">
+                        As a student researcher at the Mannheim Institute for Sustainable Energy Studies, I work on research projects in the decarbonization and renewable energy sector.
+                    </ul>
+                </div>
+                <div className="item">
                     <span className="job-title">Working Student Value Experience Innovation</span><span className="job-company"> &#47;&#47; SAP</span>
                     <div className="job-time">October 2022 - June 2023</div>
                     <ul className="job-description">
@@ -92,15 +106,17 @@ function TabPanel(props) {
                     <span className="job-title">M.Sc. Management</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">Since September 2023</div>
                     <div className="job-description">
-                        I continue my studies as a graduate student at the University of Mannheim
+                        I continue my studies as a graduate student at the University of Mannheim. My interests are in sustainable management, finance and entrepreneurship.
                     </div>
                 </div>
               <div className="item">
                     <span className="job-title">B.Sc. Business Administration</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">September 2019 - July 2023</div>
                     <div className="job-description">
-                        I studied Business Administration with a special interest in Management, Finance and Decarbonization. My bachelor's thesis, "Examining the Viability of Net-Negative Carbon Removal
-Techniques: An Economic and Environmental Evaluation", can be found <a href="https://github.com/thimomerke/bachelor-thesis/blob/main/BachelorThesis061023.pdf" target="_blank" rel="noreferrer">here</a>
+                        I graduated from the University of Mannheim with a Degree in Business Administration, with a focus on in management, finance and sustainability. My bachelor's thesis, 
+                        <span style={{fontStyle: "italic"}}>
+                          "Examining the Viability of Net-Negative Carbon Removal Techniques: An Economic and Environmental Evaluation"
+                        </span>, can be found <a href="https://github.com/thimomerke/bachelor-thesis/blob/main/BachelorThesis061023.pdf" target="_blank" rel="noreferrer">here</a>
                     </div>
                 </div>
                 <div className="item">
@@ -108,13 +124,6 @@ Techniques: An Economic and Environmental Evaluation", can be found <a href="htt
                     <div className="job-time">September 2021 - December 2021</div>
                     <div className="job-description">
                         I studied at Smith School of Business for one semester, where I focused on Management and Sustainability topics
-                    </div>
-                </div>
-                <div className="item">
-                    <span className="job-title">Computer Science</span><span className="job-company"> &#47;&#47; RWTH Aachen, Germany</span>
-                    <div className="job-time">October 2018 - August 2019</div>
-                    <div className="job-description">
-                        I studied two semesters of Computer Science, with coursework in Mathematics, Programming and Algorithmics before switching to Business Administration
                     </div>
                 </div>
             </div>

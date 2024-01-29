@@ -6,7 +6,7 @@ import '../styles/Top.component.css';
 class Top extends Component {
   render() {
     
-    const title = "Welcome, I'm"
+    const title = "Hi, I'm"
     const name = "Thimo"
     const subtitle = "I'm a graduate student of business and management from Mannheim, Germany."
 
@@ -16,7 +16,7 @@ class Top extends Component {
           <Row className="heading">
             <div>
               {title}
-              <span className="name"> {name}</span>
+              <span className="name"> {name} </span> <img src="/hand.png"  width="70" height="70" alt="Waving hand emoji"></img>
             </div>
           </Row>
           <Row className="subheading">

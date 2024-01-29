@@ -1,8 +1,6 @@
 .footer{
     padding: 1vh;
     max-width: 100%;
-}
-.footer a{
     color: var(--contrast2);
 }
 .symbol{
