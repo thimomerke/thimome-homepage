@@ -15,6 +15,7 @@ class Projects extends Component {
             </span>
           </Row>
           <Row className="section-content">
+            These are some of my personal "pet projects", mostly unrelated to my work and research, but maybe still fun to have a look at.
             <ProjectsPanel></ProjectsPanel>
           </Row>
         </Container>

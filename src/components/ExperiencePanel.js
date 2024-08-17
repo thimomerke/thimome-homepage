@@ -55,17 +55,17 @@ function TabPanel(props) {
         <TabPanel value={value} index={0}>
             <div className="tabpanel">
                 <div className="item">
-                    <span className="job-title">Student Consultant and Project Leader</span><span className="job-company"> &#47;&#47; 180DC Mannheim</span>
-                    <div className="job-time">Since October 2023</div>
-                    <ul className="job-description">
-                        180DC is the world's largest university-based consultancy for nonprofits and social enterprises. As a project leader, I manage a consulting project in the carbon removal industry.
-                    </ul>
-                </div>
-                <div className="item">
                     <span className="job-title">Student Researcher</span><span className="job-company"> &#47;&#47; University of Mannheim / MISES</span>
                     <div className="job-time">Since October 2023</div>
                     <ul className="job-description">
                         As a student researcher at the Mannheim Institute for Sustainable Energy Studies, I work on research projects in the decarbonization and renewable energy sector.
+                    </ul>
+                </div>
+                <div className="item">
+                    <span className="job-title">Student Consultant and Project Leader</span><span className="job-company"> &#47;&#47; 180DC Mannheim</span>
+                    <div className="job-time">October 2023 - January 2024</div>
+                    <ul className="job-description">
+                        180DC is the world's largest university-based consultancy for nonprofits and social enterprises. As a project leader, I managed a consulting project in the carbon removal industry.
                     </ul>
                 </div>
                 <div className="item">
@@ -102,13 +102,20 @@ function TabPanel(props) {
         </TabPanel>
         <TabPanel value={value} index={1}>
             <div className="tabpanel">
-            <div className="item">
+              <div className="item">
+                    <span className="job-title">Management</span><span className="job-company"> &#47;&#47; Copenhagen Business School, Denmark</span>
+                    <div className="job-time">Since August 2024</div>
+                    <div className="job-description">
+                        In addition to my studies at the University of Mannheim, I'm spending a semester at CBS with a minor in ESG accounting and sustainable finance.
+                    </div>
+              </div>
+              <div className="item">
                     <span className="job-title">M.Sc. Management</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">Since September 2023</div>
                     <div className="job-description">
-                        I continue my studies as a graduate student at the University of Mannheim. My interests are in sustainable management, finance and entrepreneurship.
+                        I continue my studies as a graduate student at the University of Mannheim. My interests are in sustainable management, finance and accounting.
                     </div>
-                </div>
+              </div>
               <div className="item">
                     <span className="job-title">B.Sc. Business Administration</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">September 2019 - July 2023</div>

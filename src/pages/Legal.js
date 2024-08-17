@@ -5,11 +5,23 @@ import '../styles/global.css';
 export default function Legal() {
   return (
     <div className="legal">
-      
+    <meta name="robots" content="noindex"></meta>  
       <main className="main">
       <section className="section">
       <div className="container w-75 p-3">
-      <h2>Datenschutzerklärung</h2><p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
+
+      <h2>Impressum</h2>
+
+<p>Thimo Merke<br />
+Hessische Str. 54<br />
+68305 Mannheim</p>
+
+<h2>Kontakt</h2>
+<p>E-Mail: hello@thimo.me</p>
+
+<p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
+
+<h2>Datenschutzerklärung</h2><p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
 
 </p><h3 id="dsg-general-controller">Verantwortlicher</h3><p>Thimo Merke</p>
 <p>Hessische Str. 54</p>
