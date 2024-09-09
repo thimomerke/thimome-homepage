@@ -89,7 +89,7 @@ function TabPanel(props) {
                     </ul>
                 </div>
                 <div className="item">
-                    <span className="job-title">Intern Business Development and Marketing</span><span className="job-company"> &#47;&#47; BASF</span>
+                    <span className="job-title">Intern Business Development and Marketing</span><span className="job-company"> &#47;&#47; BASF Chemovator</span>
                     <div className="job-time">March 2021 - June 2021</div>
                     <ul className="job-description">
                         <li>Online and offline marketing campaigns</li>
@@ -98,40 +98,47 @@ function TabPanel(props) {
                         <li>Photography</li>
                     </ul>
                 </div>
+                <div className="item">
+                    <span className="job-title">Intern Audit</span><span className="job-company"> &#47;&#47; KPMG</span>
+                    <div className="job-time">January 2021 - February 2021</div>
+                    <ul className="job-description">
+                        <li>Financial statements and annual report auditing according to HGB and IFRS</li>
+                    </ul>
+                </div>
             </div>
         </TabPanel>
         <TabPanel value={value} index={1}>
             <div className="tabpanel">
               <div className="item">
                     <span className="job-title">Management</span><span className="job-company"> &#47;&#47; Copenhagen Business School, Denmark</span>
-                    <div className="job-time">Since August 2024</div>
-                    <div className="job-description">
-                        In addition to my studies at the University of Mannheim, I'm spending a semester at CBS with a minor in ESG accounting and sustainable finance.
-                    </div>
+                    <div className="job-time">Since September 2024</div>
+                    <ul className="job-description">
+                        In addition to my studies at the University of Mannheim, I'm spending a semester at CBS with a minor in ESG accounting and sustainable finance
+                    </ul>
               </div>
               <div className="item">
                     <span className="job-title">M.Sc. Management</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">Since September 2023</div>
-                    <div className="job-description">
-                        I continue my studies as a graduate student at the University of Mannheim. My interests are in sustainable management, finance and accounting.
-                    </div>
+                    <ul className="job-description">
+                        I continue my studies as a graduate student at the University of Mannheim. My interests are in sustainable management, finance and accounting
+                    </ul>
               </div>
               <div className="item">
                     <span className="job-title">B.Sc. Business Administration</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">September 2019 - July 2023</div>
-                    <div className="job-description">
+                    <ul className="job-description">
                         I graduated from the University of Mannheim with a Degree in Business Administration, with a focus on in management, finance and sustainability. My bachelor's thesis, 
                         <span style={{fontStyle: "italic"}}>
                           "Examining the Viability of Net-Negative Carbon Removal Techniques: An Economic and Environmental Evaluation"
                         </span>, can be found <a href="https://github.com/thimomerke/bachelor-thesis/blob/main/BachelorThesis061023.pdf" target="_blank" rel="noreferrer">here</a>
-                    </div>
+                    </ul>
                 </div>
                 <div className="item">
                     <span className="job-title">Commerce</span><span className="job-company"> &#47;&#47; Queen's University, Kingston, Canada</span>
                     <div className="job-time">September 2021 - December 2021</div>
-                    <div className="job-description">
+                    <ul className="job-description">
                         I studied at Smith School of Business for one semester, where I focused on Management and Sustainability topics
-                    </div>
+                    </ul>
                 </div>
             </div>
         </TabPanel>

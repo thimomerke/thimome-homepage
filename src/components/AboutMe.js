@@ -22,8 +22,8 @@ class AboutMe extends Component {
           <Row className="section-content">
             <Col className="about-text">
                 <p>I'm a graduate student of business at the {Parser(unima)} and {Parser(cbs)}.</p>
-                <p>My main reasearch interests are the techno-economic aspects of renewable energy, carbon removal and other sustainability-related topics. I also do some side projects in programming and photo- and videography.</p>
-                <p>In my free time, if I'm not at my PC, I like going hiking, biking, running and pretty much everything everything outdoors. <br />I'm also a huge space nerd #OccupyMars</p>
+                <p>My main reasearch interests are the techno-economic aspects of renewable energy, carbon removal and other sustainability-related topics. I also do some other, personal coding projects on the side.</p>
+                <p>In my free time, if I'm not at my PC, I like reading, learning languages, and doing sports such as hiking, biking, running and pretty much everything outdoors. <br />I'm also a huge space nerd #OccupyMars</p>
                 <p>You want to talk? Let's connect on {Parser(linkedin)}, or just shoot me an e-mail at {Parser(email)}</p>
             </Col>
             <Col className="about-photo">
