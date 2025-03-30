@@ -62,6 +62,13 @@ function TabPanel(props) {
                     </ul>
                 </div>
                 <div className="item">
+                    <span className="job-title">Intern ESG Expert Group</span><span className="job-company"> &#47;&#47; KPMG</span>
+                    <div className="job-time">January 2024 - March 2024</div>
+                    <ul className="job-description">
+                        As an intern with the ESG Expert Group, I worked on projects regarding the implementation of CSRD and other EU sustainability regulations at various large, global companies.
+                    </ul>
+                </div>
+                <div className="item">
                     <span className="job-title">Student Consultant and Project Leader</span><span className="job-company"> &#47;&#47; 180DC Mannheim</span>
                     <div className="job-time">October 2023 - January 2024</div>
                     <ul className="job-description">
@@ -110,17 +117,17 @@ function TabPanel(props) {
         <TabPanel value={value} index={1}>
             <div className="tabpanel">
               <div className="item">
-                    <span className="job-title">Management</span><span className="job-company"> &#47;&#47; Copenhagen Business School, Denmark</span>
-                    <div className="job-time">Since September 2024</div>
-                    <ul className="job-description">
-                        In addition to my studies at the University of Mannheim, I'm spending a semester at CBS with a minor in ESG accounting and sustainable finance
-                    </ul>
-              </div>
-              <div className="item">
                     <span className="job-title">M.Sc. Management</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
                     <div className="job-time">Since September 2023</div>
                     <ul className="job-description">
                         I continue my studies as a graduate student at the University of Mannheim. My interests are in sustainable management, finance and accounting
+                    </ul>
+              </div>
+              <div className="item">
+                    <span className="job-title">Management</span><span className="job-company"> &#47;&#47; Copenhagen Business School, Denmark</span>
+                    <div className="job-time">September 2024 - December 2024</div>
+                    <ul className="job-description">
+                        In addition to my studies at the University of Mannheim, I'm spending a semester at CBS with a minor in ESG accounting and sustainable finance
                     </ul>
               </div>
               <div className="item">
