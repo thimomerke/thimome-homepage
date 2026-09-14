@@ -1,0 +1,40 @@
+.stripe-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.stripe-field-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Fades the field into the page so text above it stays readable. */
+.stripe-field-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--bg) 0%,
+    color-mix(in srgb, var(--bg) 72%, transparent) 26%,
+    color-mix(in srgb, var(--bg) 60%, transparent) 50%,
+    color-mix(in srgb, var(--bg) 86%, transparent) 78%,
+    var(--bg) 100%
+  );
+}
+
+/* Fallback for browsers without color-mix(). */
+@supports not (background: color-mix(in srgb, red 50%, blue)) {
+  .stripe-field-mask {
+    background: linear-gradient(
+      to bottom,
+      var(--bg) 0%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg) 100%
+    );
+    opacity: 0.92;
+  }
+}

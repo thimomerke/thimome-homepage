@@ -1,20 +1,30 @@
-import Top from '../components/Top.js'
-import AboutMe from '../components/AboutMe.js'
-import Experience from '../components/Experience.js';
-import Projects from '../components/Projects.js';
-import '../styles/global.css';
+import React from 'react';
+import Top from '../components/Top';
+import AboutMe from '../components/AboutMe';
+import Experience from '../components/Experience';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
-function Home() {
-  return (
-    <div>
-      <div className="main">
-        <Top></Top>
-        <AboutMe></AboutMe>
-        <Experience></Experience>
-        <Projects></Projects>
-      </div>
+const Home = () => (
+  <>
+    <Top />
+
+    <div className="rail rail-left" aria-hidden="true">
+      <a className="rail-text" href="mailto:mail@thimo.me" tabIndex={-1}>
+        mail@thimo.me
+      </a>
     </div>
-  );
-}
+    <div className="rail rail-right" aria-hidden="true">
+      <span className="rail-text">49.49&deg;N 8.47&deg;E</span>
+    </div>
+
+    <main id="content">
+      <AboutMe />
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
+  </>
+);
 
 export default Home;

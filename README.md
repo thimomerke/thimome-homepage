@@ -1,6 +1,6 @@
 # thimo.me
 
-My personal homepage [thimo.me](https://thimo.me), created with [Create React App](https://github.com/facebook/create-react-app) using React Bootstrap and Material UI.
+My personal homepage [thimo.me](https://thimo.me), built with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Install and run this app
 
@@ -11,27 +11,59 @@ My personal homepage [thimo.me](https://thimo.me), created with [Create React Ap
 `npm install`
 
 **Step 3:** Run the app
-`npm start dev`
+`npm start`
 
-## Adjusting the color and font scheme
+## Design system
 
-The color and font scheme can be adjusted by modifying the `:root` section in the global.css file inside the styles folder.
-The default colors and fonts are as follows:
-| | Default Value |
-| -------------------------- | -------------------------------------------------------------------------|
-| Background Color | ![faf7ef](https://via.placeholder.com/10/faf7ef?text=+) `#faf7ef` |
-| Contrast Color 1 | ![fd4c4c](https://via.placeholder.com/10/fd4c4c?text=+) `#fd4c4c` |
-| Contrast Color 2 | ![e9b000](https://via.placeholder.com/10/e9b000?text=+) `#e9b000` |
-| Text Color | ![1a2238](https://via.placeholder.com/10/1a2238?text=+) `#1a2238` |
-| Font Headings | 'Montserrat', sans-serif |
-| Font Text | 'Quicksand', sans-serif |
-| Font Weight Headings | 500 |
-| Font Weight Content | 400 |
+The visual language is a "climate instrument": a warming-stripe colour ramp, oversized display
+type for headings, monospace for all metadata and readouts, and a prose face for body copy.
 
-I also integrated the used of icons through Font Awesome, which can be used by placing the following snippet:
+Everything is driven by custom properties in the `:root` blocks of `src/styles/global.css`.
+Change them there and the whole site follows.
 
-`<i className="fa fa-{REPLACE BY ICON NAME}" style={{fontSize: {ADJUST ICON SIZE}}}> </i>`
+### Themes
 
-or using `<a>` for a link icon:
+The site ships light and dark. The theme is stored in `localStorage` under `thimo-theme` and
+applied to `<html data-theme="...">` by an inline script in `public/index.html`, which runs
+before first paint so there is no flash of the wrong theme. When nothing is stored, the
+visitor's `prefers-color-scheme` decides. The toggle lives in the header.
 
-`<a className="fa fa-{REPLACE BY ICON NAME}" style={{fontSize: {ADJUST ICON SIZE}}} href={LINK}"> </a>`
+To change the palette, edit these blocks in `src/styles/global.css`:
+
+| Block | What it sets |
+| ------------------------------- | ----------------------------------------- |
+| `:root` | Stripe ramp, fonts, type scale, spacing |
+| `:root, :root[data-theme='dark']` | Dark palette |
+| `:root[data-theme='light']` | Light palette |
+
+Key tokens per theme: `--bg`, `--bg-elevated`, `--bg-sunken`, `--ink`, `--ink-muted`,
+`--ink-faint`, `--line`, `--line-strong`, `--accent`, `--accent-cold`, `--stripe-alpha`.
+
+### Fonts
+
+| Role | Family |
+| --------- | ----------------------------------------------- |
+| Display | `--font-display`, Montserrat 500/600/700/800 |
+| Body | `--font-text`, Quicksand |
+| Data | `--font-mono`, the platform monospace stack |
+
+Montserrat and Quicksand are self-hosted via the `typeface-*` packages and imported in
+`src/index.js`.
+
+### The stripe field
+
+`src/components/StripeField.js` paints the hero background on a canvas: vertical stripes
+coloured from a cold-to-warm ramp, drifting slowly, with a soft lens under the cursor.
+It is decorative and generated from layered sine waves, not from a dataset. It pauses when
+the hero scrolls out of view or the tab is hidden, and renders a single static frame for
+visitors who ask for reduced motion.
+
+### Motion
+
+Sections fade in on scroll through `src/lib/useReveal.js` (IntersectionObserver, with a
+timeout so content never stays hidden). Every animation is disabled under
+`prefers-reduced-motion: reduce`.
+
+## Icons
+
+Icons are inline SVG in the components that use them. There is no icon-font dependency.

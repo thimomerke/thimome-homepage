@@ -1,0 +1,89 @@
+.contact-lead {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-lead);
+  color: var(--ink-muted);
+  margin: 0 0 0.75rem;
+}
+
+.contact-mail {
+  display: block;
+  color: var(--ink);
+}
+
+.contact-mail-text {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3.75vw, 2.5rem);
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  word-break: break-word;
+  transition: color var(--dur) var(--ease);
+}
+
+.contact-mail:hover .contact-mail-text {
+  color: var(--accent);
+}
+
+/* Sized by width, not scaleX, so the short state still shows the whole
+   cold-to-warm ramp instead of only its darkest blue end. */
+.contact-mail-rule {
+  margin-top: 1rem;
+  width: 28%;
+  transition: width 600ms var(--ease);
+}
+
+.contact-mail:hover .contact-mail-rule,
+.contact-mail:focus-visible .contact-mail-rule {
+  width: 100%;
+}
+
+/* --- Channels ------------------------------------------------------------ */
+.contact-channels {
+  list-style: none;
+  margin: clamp(2.5rem, 6vh, 4rem) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr;
+}
+
+.contact-channels li {
+  border-top: 1px solid var(--line);
+}
+
+.contact-channels a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+  color: var(--ink);
+  transition: color var(--dur) var(--ease), padding-left var(--dur) var(--ease);
+}
+
+.contact-channels a:hover {
+  color: var(--accent);
+  padding-left: 0.6rem;
+}
+
+.contact-channel-label {
+  color: var(--ink-faint);
+}
+
+.contact-channels a:hover .contact-channel-label {
+  color: var(--accent);
+}
+
+.contact-channel-handle {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+@media (min-width: 760px) {
+  .contact-channels {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 2.5rem;
+  }
+}

@@ -1,7 +1,7 @@
-.post{
-    min-height: 10vh !important;
-    overflow:hidden
+.postlist {
+  padding-block: clamp(8rem, 18vh, 11rem) clamp(4rem, 10vh, 7rem);
 }
-.postlist img{
-    max-height: 20vh !important;
+
+.postlist .post:last-child {
+  border-bottom: none;
 }

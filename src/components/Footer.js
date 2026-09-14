@@ -1,30 +1,28 @@
-import React, { Component } from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
+import React from 'react';
 import '../styles/Footer.component.css';
 
-class Footer extends Component {
-    render() {
-      return (
-        <div className="footer">
-          <Container>
-          <Row className="links">
-                <Col>
-                <i className="fa fa-copyright social symbol"></i>Thimo Merke {new Date().getFullYear()}
-                </Col>
-                <Col className="d-flex justify-content-center">
-                    <a className="fa fa-instagram social symbol" style={{fontSize: "24px"}} href="https://instagram.com/thimo_me" target="_blank" rel="noreferrer"> </a>
-                    <a className="fa fa-linkedin social symbol" style={{fontSize: "24px"}} href="https://www.linkedin.com/in/thimo-merke/" target="_blank" rel="noreferrer"> </a>
-                </Col>
-                <Col className="d-flex flex-row-reverse">
-                <a href="/legal">Legal Notice</a>
-                </Col>
-            </Row>
-          </Container>
-        </div>
-      );
-    }
-  }
-  
-  export default Footer;
+const Footer = () => (
+  <footer className="site-footer">
+    <div className="stripe-bar" />
+    <div className="shell site-footer-inner">
+      <span className="mono mono-sm">
+        &copy; Thimo Merke {new Date().getFullYear()}
+      </span>
+
+      <span className="mono mono-sm site-footer-built">
+        Built with React &middot; Mannheim, DE
+      </span>
+
+      <span className="site-footer-links">
+        <a className="mono mono-sm" href="/legal">
+          Legal notice
+        </a>
+        <a className="mono mono-sm" href="#home">
+          Back to top &uarr;
+        </a>
+      </span>
+    </div>
+  </footer>
+);
+
+export default Footer;

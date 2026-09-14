@@ -1,53 +1,341 @@
+/* ==========================================================================
+   thimo.me — design system
+   A "climate instrument" aesthetic: warming-stripe palette, monospace
+   readouts, oversized display type. All colour, spacing and type decisions
+   live here as custom properties.
+   ========================================================================== */
+
+/* --- Warming-stripe ramp (ColorBrewer RdBu, cold -> warm) ---------------- */
 :root {
-  --background: #ffffff;
-  --contrast: #228B22;
-  --contrast1: #32CD32;
-  --contrast2: #006400;
-  --font-heading: 'Montserrat', sans-serif;
-  --font-text: 'Quicksand', sans-serif;
-  --font-weight-heading: 500;
-  --font-size-content: 20px;
+  --s-cold-4: #08306b;
+  --s-cold-3: #2171b5;
+  --s-cold-2: #4292c6;
+  --s-cold-1: #9ecae1;
+  --s-warm-1: #fcbba1;
+  --s-warm-2: #fb6a4a;
+  --s-warm-3: #cb181d;
+  --s-warm-4: #67000d;
+
+  /* --- Type ------------------------------------------------------------- */
+  --font-display: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --font-text: 'Quicksand', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Segoe UI Mono',
+    Consolas, 'Liberation Mono', monospace;
+
+  --fs-display: clamp(3rem, 12vw, 9.5rem);
+  --fs-h2: clamp(1.75rem, 5vw, 3.25rem);
+  --fs-lead: clamp(1.125rem, 2.2vw, 1.6rem);
+  --fs-body: clamp(1rem, 1.1vw, 1.125rem);
+  --fs-mono: 0.75rem;
+  --fs-mono-sm: 0.6875rem;
+
+  --tracking-mono: 0.14em;
+  --tracking-display: -0.035em;
+
+  /* --- Space / shape ---------------------------------------------------- */
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --measure: 62ch;
+  --rail: 3.25rem;
+  --radius: 2px;
+  --section-space: clamp(6rem, 14vh, 11rem);
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 420ms;
+
+  color-scheme: dark;
 }
 
-.app{
-  background-color: var(--background) !important;
+/* --- Dark (default) ------------------------------------------------------ */
+:root,
+:root[data-theme='dark'] {
+  --bg: #07080b;
+  --bg-elevated: #0e1016;
+  --bg-sunken: #050609;
+  --ink: #e9ecf2;
+  --ink-muted: #8b93a3;
+  --ink-faint: #5a6273;
+  --line: #1b1f28;
+  --line-strong: #2b313d;
+  --accent: #ff6b45;
+  --accent-soft: rgba(255, 107, 69, 0.14);
+  --accent-cold: #56a8e0;
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
+  --stripe-alpha: 0.7;
+  color-scheme: dark;
 }
 
-.section{
-  padding-top: 15vh;
-  padding-bottom: 15vh;
-  margin-left: 0% !important;
-  color: var(--contrast2);
+/* --- Light --------------------------------------------------------------- */
+:root[data-theme='light'] {
+  --bg: #f6f3ec;
+  --bg-elevated: #fffdf8;
+  --bg-sunken: #ebe6db;
+  --ink: #14161a;
+  --ink-muted: #565f6e;
+  --ink-faint: #8b93a3;
+  --line: #ddd6c8;
+  --line-strong: #c3baa8;
+  --accent: #cf3616;
+  --accent-soft: rgba(207, 54, 22, 0.1);
+  --accent-cold: #1b6ea8;
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+  --stripe-alpha: 0.6;
+  color-scheme: light;
 }
-.section-heading{
-  font-size: 3rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: var(--font-weight-heading);
-  max-width: 100%;
-  color: var(--contrast);
+
+/* --- Reset --------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.section-content{
-  margin-top: 2vh !important;
-  max-width: 100%;
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
   font-family: var(--font-text);
-  font-size: var(--font-size-content);
-}
-@media only screen and (max-width: 768px) {
-  .container{
-    margin-left: 5%;
-    max-width: 95%;
-  }
-  .section{
-    padding-top: 7vh;
-    padding-bottom: 7vh;
-    width: 95%;
-  }
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
 }
 
-a{
-  color: var(--contrast1);
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
   text-decoration: none;
 }
+
 a:hover {
-  color: var(--contrast) !important;
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* --- Layout primitives --------------------------------------------------- */
+.app {
+  min-height: 100vh;
+  background: var(--bg);
+  overflow-x: clip;
+}
+
+.shell {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-space);
+  position: relative;
+}
+
+/* Hairline that runs above each section, fading out to the right. */
+.section::before {
+  content: '';
+  position: absolute;
+  inset-inline: var(--gutter);
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--line-strong), transparent 70%);
+}
+
+/* --- Section headings ---------------------------------------------------- */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: clamp(2rem, 5vh, 3.5rem);
+  flex-wrap: wrap;
+}
+
+.section-index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.section-rule {
+  flex: 1 1 8rem;
+  height: 1px;
+  background: var(--line-strong);
+  transform: translateY(-0.35em);
+}
+
+/* --- Monospace readout label --------------------------------------------- */
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.mono-sm {
+  font-size: var(--fs-mono-sm);
+}
+
+/* --- Stripe accent bar --------------------------------------------------- */
+.stripe-bar {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--s-cold-4) 0%,
+    var(--s-cold-3) 14%,
+    var(--s-cold-2) 26%,
+    var(--s-cold-1) 38%,
+    var(--s-warm-1) 54%,
+    var(--s-warm-2) 70%,
+    var(--s-warm-3) 86%,
+    var(--s-warm-4) 100%
+  );
+}
+
+/* --- Scroll reveal ------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Skip link ----------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* --- Side rails (desktop only) ------------------------------------------- */
+.rail {
+  position: fixed;
+  bottom: 0;
+  width: var(--rail);
+  height: 42vh;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.rail-left {
+  left: 0;
+}
+
+.rail-right {
+  right: 0;
+}
+
+.rail-text {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  letter-spacing: var(--tracking-mono);
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  margin-bottom: 1.5rem;
+}
+
+.rail-left .rail-text {
+  transform: rotate(180deg);
+}
+
+.rail::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: 8rem;
+  background: linear-gradient(to bottom, transparent, var(--line-strong));
+}
+
+@media (min-width: 1200px) {
+  .rail {
+    display: flex;
+  }
+}
+
+/* --- Reduced motion ------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rail a {
+  pointer-events: auto;
+}
+
+.rail a:hover {
+  color: var(--accent);
 }
