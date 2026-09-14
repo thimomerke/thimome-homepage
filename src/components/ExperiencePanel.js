@@ -56,7 +56,7 @@ function TabPanel(props) {
             <div className="tabpanel">
                 <div className="item">
                     <span className="job-title">Student Researcher</span><span className="job-company"> &#47;&#47; University of Mannheim / MISES</span>
-                    <div className="job-time">Since October 2023</div>
+                    <div className="job-time">October 2023 - July 2026</div>
                     <ul className="job-description">
                         As a student researcher at the Mannheim Institute for Sustainable Energy Studies, I work on research projects in the decarbonization and renewable energy sector.
                     </ul>
@@ -99,7 +99,7 @@ function TabPanel(props) {
                         <li>Photography and video production for a Conference with over 1000 attendees</li>
                         <li>Social media management, mainly LinkedIn</li>
                         <li>Web and marketing analytics</li>
-                        <li>Programming and maintainance of the Website</li>
+                        <li>Programming and maintenance of the Website</li>
                     </ul>
                 </div>
                 <div className="item">
@@ -125,9 +125,9 @@ function TabPanel(props) {
             <div className="tabpanel">
               <div className="item">
                     <span className="job-title">M.Sc. Management</span><span className="job-company"> &#47;&#47; University of Mannheim, Germany</span>
-                    <div className="job-time">Since September 2023</div>
+                    <div className="job-time">September 2023 - July 2026</div>
                     <ul className="job-description">
-                        I continue my studies as a graduate student at the University of Mannheim. My interests are in sustainable management, finance and accounting. I was honored to be member of the Dean's List <a href="https://www.mannheim-business-school.com/en/validation/?credential=101d2803-097c-4df3-b402-db798665b1b2" target="_blank" rel="noreferrer">2024</a> and <a href="https://www.mannheim-business-school.com/en/validation/?credential=3945c0bb-584b-402f-8546-f5a70798e87a" target="_blank" rel="noreferrer">2025</a>.
+                        I studied as a graduate student at the University of Mannheim, with interests in sustainable management, finance and accounting. I was honored to be member of the Dean's List <a href="https://www.mannheim-business-school.com/en/validation/?credential=101d2803-097c-4df3-b402-db798665b1b2" target="_blank" rel="noreferrer">2024</a> and <a href="https://www.mannheim-business-school.com/en/validation/?credential=3945c0bb-584b-402f-8546-f5a70798e87a" target="_blank" rel="noreferrer">2025</a>.
                     </ul>
               </div>
               <div className="item">

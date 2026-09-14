@@ -14,7 +14,7 @@ const projects = [
     techs: 'Python, Shiny', github: 'https://huggingface.co/spaces/UniMaMISES/LCOE_calculator_shiny/tree/main', deploy: 'https://unimamises-lcoe-calculator-shiny.hf.space/'},
   { id: 2, name: 'Strategic CDR Portfolio Model', 
     desc: `Model to determine the optimal portfolio of carbon dioxide removal (CDR) technologies for a given set of parameters, such as cost, scalability and permanence; under development as part of my master thesis`, 
-    techs: 'JavaScript, React, CSS', github: 'https://github.com/thimomerke/master-thesis/blob/main/MasterThesisDraft.pdf'},
+    techs: 'JavaScript, React, CSS', github: 'https://github.com/thimomerke/master-thesis/blob/main/MasterThesisFinal.pdf'},
 ]
 
 const ProjectsPanel = () => {

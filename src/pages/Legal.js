@@ -17,7 +17,7 @@ Hessische Str. 54<br />
 68305 Mannheim</p>
 
 <h2>Kontakt</h2>
-<p>E-Mail: hello@thimo.me</p>
+<p>E-Mail: mail@thimo.me</p>
 
 <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
 
@@ -27,7 +27,7 @@ Hessische Str. 54<br />
 <p>Hessische Str. 54</p>
 <p>68305 Mannheim</p>
 
-<p>hello@thimo.me</p><h3 id="dsg-general-datatype">Arten der verarbeiteten Daten:</h3><p>-	Bestandsdaten (z.B., Namen, Adressen).
+<p>mail@thimo.me</p><h3 id="dsg-general-datatype">Arten der verarbeiteten Daten:</h3><p>-	Bestandsdaten (z.B., Namen, Adressen).
 -	Kontaktdaten (z.B., E-Mail, Telefonnummern).
 -	Inhaltsdaten (z.B., Texteingaben, Fotografien, Videos).
 -	Nutzungsdaten (z.B., besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten).
