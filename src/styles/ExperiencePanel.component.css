@@ -72,7 +72,6 @@
 
 .xp-time {
   color: var(--ink-faint);
-  white-space: nowrap;
 }
 
 .xp-item-body {
@@ -147,15 +146,18 @@
   background: var(--accent);
 }
 
-@media (min-width: 820px) {
+@media (min-width: 880px) {
   .xp-item {
-    grid-template-columns: 13rem minmax(0, 1fr);
+    /* Wide enough for the longest date plus the meta's own right padding,
+       so the text never reaches into the gap. */
+    grid-template-columns: 16.5rem minmax(0, 1fr);
     gap: 2rem;
     padding-bottom: 2.75rem;
   }
 
   .xp-item-meta {
     padding-top: 0.35rem;
+    padding-right: 0.75rem;
     text-align: right;
   }
 
@@ -165,8 +167,20 @@
     padding-bottom: 0.25rem;
   }
 
+  /* The last item keeps its spine, drawn as a gradient so it fades out at the
+     end instead of dangling below the final line of text. */
   .xp-item:last-child .xp-item-body {
     border-left-color: transparent;
+    background-image: linear-gradient(
+      to bottom,
+      var(--line) 0,
+      var(--line) calc(100% - 3rem),
+      transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 1px 100%;
+    background-position: left top;
+    background-origin: border-box;
   }
 
   .xp-node {

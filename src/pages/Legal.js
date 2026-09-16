@@ -19,8 +19,8 @@ export default function Legal() {
       <h2>Impressum</h2>
 
 <p>Thimo Merke<br />
-Hessische Str. 54<br />
-68305 Mannheim</p>
+Kistlerhofstraße 179<br />
+81379 München</p>
 
 <h2>Kontakt</h2>
 <p>E-Mail: mail@thimo.me</p>
@@ -30,8 +30,8 @@ Hessische Str. 54<br />
 <h2>Datenschutzerklärung</h2><p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
 
 </p><h3 id="dsg-general-controller">Verantwortlicher</h3><p>Thimo Merke</p>
-<p>Hessische Str. 54</p>
-<p>68305 Mannheim</p>
+<p>Kistlerhofstraße 179</p>
+<p>81379 München</p>
 
 <p>mail@thimo.me</p><h3 id="dsg-general-datatype">Arten der verarbeiteten Daten:</h3><p>-	Bestandsdaten (z.B., Namen, Adressen).
 -	Kontaktdaten (z.B., E-Mail, Telefonnummern).

@@ -12,24 +12,24 @@ const WORK = [
     lead: `As a graduate research assistant at the Mannheim Institute for Sustainable Energy Studies, I worked on research projects in the decarbonization and renewable energy sector.`,
   },
   {
-    title: 'Intern Private Equity / Inhouse Consulting',
-    org: 'Aurelius',
+    title: 'Sustainable Value Creation Intern',
+    org: 'Aurelius Private Equity',
     time: 'July 2025 - October 2025',
     lead: `At Aurelius, I worked with various portfolio companies (aerospace, FMCG) on projects regarding regulatory compliance (e.g. CSRD) and procurement.`,
   },
   {
-    title: 'Intern ESG Expert Group',
+    title: 'ESG Expert Group Intern',
     org: 'KPMG',
     time: 'January 2025 - March 2025',
     lead: `As an intern with the ESG Expert Group at KPMG, I worked on projects regarding the implementation of CSRD and other EU regulations at various large, global companies.`,
   },
   {
-    title: 'Student Consultant and Project Leader',
+    title: 'Project Leader',
     org: '180DC Mannheim',
     time: 'October 2023 - January 2024',
     lead: `180DC is the world's largest university-based consultancy for nonprofits and social enterprises. As a project leader, I managed a consulting project in the carbon removal industry.`,
   },
-  {
+  /*{
     title: 'Working Student Value Experience Innovation',
     org: 'SAP',
     time: 'October 2022 - June 2023',
@@ -61,14 +61,12 @@ const WORK = [
       'Marketing analytics',
       'Photography',
     ],
-  },
+  },*/
   {
-    title: 'Intern Audit',
+    title: 'Assurance / Audit Intern',
     org: 'KPMG',
     time: 'January 2021 - February 2021',
-    bullets: [
-      'Financial statements and annual report auditing according to HGB and IFRS',
-    ],
+    lead: 'As an intern in assurance / audit I supported financial statements audits according to HGB and IFRS for various global corporates.',
   },
 ];
 

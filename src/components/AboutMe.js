@@ -56,7 +56,7 @@ const AboutMe = () => (
             <div className="stripe-bar" />
             <figcaption className="mono mono-sm">
               <span>Thimo Merke</span>
-              <span>Mannheim, DE</span>
+              <span>Munich, DE</span>
             </figcaption>
           </figure>
         </Reveal>

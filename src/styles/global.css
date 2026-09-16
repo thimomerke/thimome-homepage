@@ -35,7 +35,6 @@
   /* --- Space / shape ---------------------------------------------------- */
   --gutter: clamp(1.25rem, 5vw, 5rem);
   --measure: 62ch;
-  --rail: 3.25rem;
   --radius: 2px;
   --section-space: clamp(6rem, 14vh, 11rem);
 
@@ -262,56 +261,6 @@ button {
   top: 1rem;
 }
 
-/* --- Side rails (desktop only) ------------------------------------------- */
-.rail {
-  position: fixed;
-  bottom: 0;
-  width: var(--rail);
-  height: 42vh;
-  display: none;
-  align-items: flex-end;
-  justify-content: center;
-  z-index: 20;
-  pointer-events: none;
-}
-
-.rail-left {
-  left: 0;
-}
-
-.rail-right {
-  right: 0;
-}
-
-.rail-text {
-  font-family: var(--font-mono);
-  font-size: var(--fs-mono-sm);
-  letter-spacing: var(--tracking-mono);
-  color: var(--ink-faint);
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  margin-bottom: 1.5rem;
-}
-
-.rail-left .rail-text {
-  transform: rotate(180deg);
-}
-
-.rail::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 1px;
-  height: 8rem;
-  background: linear-gradient(to bottom, transparent, var(--line-strong));
-}
-
-@media (min-width: 1200px) {
-  .rail {
-    display: flex;
-  }
-}
-
 /* --- Reduced motion ------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -330,12 +279,4 @@ button {
     opacity: 1;
     transform: none;
   }
-}
-
-.rail a {
-  pointer-events: auto;
-}
-
-.rail a:hover {
-  color: var(--accent);
 }

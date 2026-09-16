@@ -10,7 +10,7 @@ const Footer = () => (
       </span>
 
       <span className="mono mono-sm site-footer-built">
-        Built with React &middot; Mannheim, DE
+        Built with React &middot; Munich, DE
       </span>
 
       <span className="site-footer-links">
