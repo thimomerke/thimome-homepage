@@ -1,20 +1,26 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/global.css';
+import { Helmet } from 'react-helmet';
+import '../styles/Legal.css';
 
 export default function Legal() {
   return (
-    <div className="legal">
-    <meta name="robots" content="noindex"></meta>  
-      <main className="main">
-      <section className="section">
-      <div className="container w-75 p-3">
+    <main className="legal" id="content">
+      <Helmet>
+        <meta name="robots" content="noindex" />
+        <title>Legal notice &mdash; Thimo Merke</title>
+      </Helmet>
+      <div className="shell legal-inner">
+        <div className="section-head">
+          <span className="section-index">&#167; / </span>
+          <h1 className="section-title">Legal notice</h1>
+          <span className="section-rule" />
+        </div>
 
       <h2>Impressum</h2>
 
 <p>Thimo Merke<br />
-Hessische Str. 54<br />
-68305 Mannheim</p>
+Kistlerhofstraße 179<br />
+81379 München</p>
 
 <h2>Kontakt</h2>
 <p>E-Mail: mail@thimo.me</p>
@@ -24,8 +30,8 @@ Hessische Str. 54<br />
 <h2>Datenschutzerklärung</h2><p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
 
 </p><h3 id="dsg-general-controller">Verantwortlicher</h3><p>Thimo Merke</p>
-<p>Hessische Str. 54</p>
-<p>68305 Mannheim</p>
+<p>Kistlerhofstraße 179</p>
+<p>81379 München</p>
 
 <p>mail@thimo.me</p><h3 id="dsg-general-datatype">Arten der verarbeiteten Daten:</h3><p>-	Bestandsdaten (z.B., Namen, Adressen).
 -	Kontaktdaten (z.B., E-Mail, Telefonnummern).
@@ -81,8 +87,6 @@ Soweit nicht anders im Rahmen unserer Datenschutzerklärung angegeben, verarbeit
 
 Dies setzt immer voraus, dass die Drittanbieter dieser Inhalte, die IP-Adresse der Nutzer wahrnehmen, da sie ohne die IP-Adresse die Inhalte nicht an deren Browser senden könnten. Die IP-Adresse ist damit für die Darstellung dieser Inhalte erforderlich. Wir bemühen uns nur solche Inhalte zu verwenden, deren jeweilige Anbieter die IP-Adresse lediglich zur Auslieferung der Inhalte verwenden. Drittanbieter können ferner so genannte Pixel-Tags (unsichtbare Grafiken, auch als &rdquo;Web Beacons&rdquo; bezeichnet) für statistische oder Marketingzwecke verwenden. Durch die &rdquo;Pixel-Tags&rdquo; können Informationen, wie der Besucherverkehr auf den Seiten dieser Website ausgewertet werden. Die pseudonymen Informationen können ferner in Cookies auf dem Gerät der Nutzer gespeichert werden und unter anderem technische Informationen zum Browser und Betriebssystem, verweisende Webseiten, Besuchszeit sowie weitere Angaben zur Nutzung unseres Onlineangebotes enthalten, als auch mit solchen Informationen aus anderen Quellen verbunden werden.</span></p><a href="https://datenschutz-generator.de">Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke</a>
       </div>
-      </section>
-      </main>
-    </div>
+    </main>
   )
 }

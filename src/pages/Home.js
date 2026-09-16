@@ -1,20 +1,21 @@
-import Top from '../components/Top.js'
-import AboutMe from '../components/AboutMe.js'
-import Experience from '../components/Experience.js';
-import Projects from '../components/Projects.js';
-import '../styles/global.css';
+import React from 'react';
+import Top from '../components/Top';
+import AboutMe from '../components/AboutMe';
+import Experience from '../components/Experience';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
-function Home() {
-  return (
-    <div>
-      <div className="main">
-        <Top></Top>
-        <AboutMe></AboutMe>
-        <Experience></Experience>
-        <Projects></Projects>
-      </div>
-    </div>
-  );
-}
+const Home = () => (
+  <>
+    <Top />
+
+    <main id="content">
+      <AboutMe />
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
+  </>
+);
 
 export default Home;

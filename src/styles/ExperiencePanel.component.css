@@ -1,73 +1,209 @@
-.tab{
-    font-family: var(--font-heading) !important;
-    font-weight: var(--font-weight-heading) !important;
-    padding: 0px !important;
-    padding-right: 1vh !important;
-    min-width: 0px !important;
+/* --- Tabs ---------------------------------------------------------------- */
+.xp-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: clamp(2rem, 5vh, 3rem);
 }
-.tab:hover{
-    color: var(--contrast) !important;
+
+.xp-tab {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  padding: 0.7rem 1rem;
+  color: var(--ink-faint);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  position: relative;
+  transition: color var(--dur) var(--ease);
 }
-.tabpanel{
-    font-family: var(--font-heading) !important;
-    color: var(--contrast) !important;
+
+.xp-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform var(--dur) var(--ease);
 }
-.item{
-    margin-bottom: 2vh;
-    max-width: 70%;
+
+.xp-tab:hover {
+  color: var(--ink-muted);
 }
-.job-title{
-    font-size: 1.2rem;
-    color: var(--contrast) !important;
-    font-weight: var(--font-weight-heading) !important;
+
+.xp-tab.is-active {
+  color: var(--ink);
 }
-.job-company{
-    font-size: 1.2rem;
-    color: var(--contrast2) !important;
-    font-weight: var(--font-weight-heading) !important;
+
+.xp-tab.is-active::after {
+  transform: scaleX(1);
 }
-.job-time{
-    font-size: 0.9rem;
-    color: var(--contrast2) !important;
+
+.xp-tab-count {
+  color: var(--accent);
 }
-.job-description{
-    font-family: var(--font-text);
-    font-size: var(--font-size-content);
-    margin-top: 0.5vh;
-    color: var(--contrast2) !important;
+
+.xp-panel:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 8px;
 }
-.MuiTab-wrapper {
-    font-size: 16px;
-    text-align: left;
-    align-items: flex-start !important;
+
+/* --- Timeline list ------------------------------------------------------- */
+.xp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.MuiBox-root{
-    margin-top: 1vh;
-    padding: 0px !important;
+
+.xp-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.35rem;
+  padding-bottom: 2.25rem;
 }
-.MuiTabs-indicator{
-    display: none !important;
+
+.xp-time {
+  color: var(--ink-faint);
 }
-.MuiButtonBase-root:focus {
-    color: var(--contrast) !important;
+
+.xp-item-body {
+  position: relative;
 }
-ul {
-    list-style: none; /* Remove default bullets */
+
+/* The connecting spine, drawn only on wide screens. */
+.xp-node {
+  display: none;
+}
+
+.xp-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.35rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.xp-org {
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.xp-slash {
+  color: var(--accent);
+  padding-inline: 0.5rem 0.4rem;
+}
+
+.xp-desc {
+  margin: 0;
+  color: var(--ink-muted);
+  max-width: var(--measure);
+}
+
+.xp-desc a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+}
+
+.xp-desc a:hover {
+  color: var(--accent);
+}
+
+.xp-desc em {
+  color: var(--ink);
+}
+
+.xp-bullets {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  max-width: var(--measure);
+  color: var(--ink-muted);
+}
+
+.xp-bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.xp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+
+@media (min-width: 880px) {
+  .xp-item {
+    /* Wide enough for the longest date plus the meta's own right padding,
+       so the text never reaches into the gap. */
+    grid-template-columns: 16.5rem minmax(0, 1fr);
+    gap: 2rem;
+    padding-bottom: 2.75rem;
   }
-ul li::before {
-    content: "\2022" !important;  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: var(--contrast1); /* Change the color */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
+
+  .xp-item-meta {
+    padding-top: 0.35rem;
+    padding-right: 0.75rem;
+    text-align: right;
   }
-@media only screen and (max-width: 1024px) {
-    .item{
-        max-width: inherit;
-    }
-}
-@media only screen and (max-width: 768px) {
-    .item{
-        margin-bottom: 2vh;
-    }
+
+  .xp-item-body {
+    border-left: 1px solid var(--line);
+    padding-left: 2rem;
+    padding-bottom: 0.25rem;
+  }
+
+  /* The last item keeps its spine, drawn as a gradient so it fades out at the
+     end instead of dangling below the final line of text. */
+  .xp-item:last-child .xp-item-body {
+    border-left-color: transparent;
+    background-image: linear-gradient(
+      to bottom,
+      var(--line) 0,
+      var(--line) calc(100% - 3rem),
+      transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 1px 100%;
+    background-position: left top;
+    background-origin: border-box;
+  }
+
+  .xp-node {
+    display: block;
+    position: absolute;
+    left: -4.5px;
+    top: 0.7rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    transition: background-color var(--dur) var(--ease),
+      border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  }
+
+  .xp-item:hover .xp-node {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.35);
+  }
+
+  .xp-item:hover .xp-time {
+    color: var(--accent);
+  }
 }

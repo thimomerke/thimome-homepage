@@ -1,42 +1,173 @@
-.home{
-    padding-top: 35vh;
-    padding-bottom:40vh;
-    margin-left: 0% !important;
-    color: var(--contrast);
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 8rem 6rem;
+  overflow: hidden;
 }
-.heading{
-    font-size: 4rem;
-    font-family: var(--font-heading);
-    font-weight: var(--font-weight-heading);
-    max-width: 85%;
-    text-transform: uppercase;
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
 }
-.subheading{
-    font-size: 1.8rem;
-    font-family: var(--font-heading);
-    font-weight: var(--font-weight-heading);
-    max-width: 75%;
+
+/* --- Kicker -------------------------------------------------------------- */
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--accent);
+  margin: 0 0 1.25rem;
 }
-.name{
-    color: var(--contrast);
-    font-weight: 600;
-    text-shadow: 3px 3px var(--contrast2);
+
+.hero-kicker-dot {
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
 }
-@media only screen and (max-width: 1024px) {
-    .home{
-        padding-top: 25vh;
-    }
+
+/* --- Name ---------------------------------------------------------------- */
+.hero-name {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: 0.86;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
-@media only screen and (max-width: 768px) {
-    .heading{
-        font-size: 3.5rem;
-    }
-    .subheading{
-        font-size: 1.5rem;
-        max-width: 85%;
-    }
-    .home{
-        padding-top: 5vh;
-        padding-bottom: 0vh;
-    }
+
+.hero-name-line {
+  display: flex;
+  align-items: center;
+  gap: 0.15em;
+}
+
+/* Outlined second line keeps the block graphic without shouting twice. */
+.hero-name-last {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink);
+  padding-left: 0.08em;
+}
+
+@supports not (-webkit-text-stroke: 1px red) {
+  .hero-name-last {
+    color: var(--ink-muted);
+  }
+}
+
+.hero-hand {
+  width: clamp(2.2rem, 6vw, 4.5rem);
+  height: auto;
+  transform-origin: 70% 80%;
+  animation: wave 3.2s var(--ease) infinite;
+}
+
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  68% { transform: rotate(16deg); }
+  76% { transform: rotate(-10deg); }
+  84% { transform: rotate(12deg); }
+  92% { transform: rotate(-4deg); }
+}
+
+/* --- Subtitle ------------------------------------------------------------ */
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-lead);
+  line-height: 1.35;
+  max-width: 34ch;
+  margin: clamp(1.5rem, 4vh, 2.5rem) 0 0;
+  color: var(--ink);
+}
+
+/* --- Readout strip ------------------------------------------------------- */
+.hero-readout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, 4vw, 3.5rem);
+  margin: clamp(2.5rem, 6vh, 4rem) 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.hero-readout-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hero-readout dt {
+  color: var(--ink-faint);
+  margin: 0;
+}
+
+.hero-readout dd {
+  margin: 0;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.8); }
+}
+
+/* --- Scroll cue ---------------------------------------------------------- */
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  right: var(--gutter);
+  z-index: 2;
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ink-faint);
+}
+
+.hero-scroll:hover {
+  color: var(--accent);
+}
+
+.hero-scroll-line {
+  width: 46px;
+  height: 1px;
+  background: currentColor;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-scroll-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  animation: sweep 2.6s var(--ease) infinite;
+}
+
+@keyframes sweep {
+  0% { transform: translateX(-100%); }
+  60%, 100% { transform: translateX(100%); }
+}
+
+@media (min-width: 860px) {
+  .hero-scroll {
+    display: flex;
+  }
 }

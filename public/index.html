@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#228B22" />
+    <meta name="theme-color" content="#07080b" />
     <meta
       name="description"
-      content="Thimo Merke, independent researcher in business, sustainable finance and accounting, based in Mannheim, Germany. Work on renewable energy, carbon removal and coding projects."
+      content="Thimo Merke, independent researcher in business, sustainable finance and accounting, based in Munich, Germany. Work on renewable energy, carbon removal and coding projects."
     />
     <meta name="author" content="Thimo Merke" />
     <link rel="canonical" href="https://thimo.me/" />
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Thimo Merke" />
     <meta
       property="og:description"
-      content="Independent researcher in business, sustainable finance and accounting, based in Mannheim, Germany."
+      content="Independent researcher in business, sustainable finance and accounting, based in Munich, Germany."
     />
     <meta property="og:url" content="https://thimo.me/" />
     <meta property="og:image" content="https://thimo.me/thimo.png" />
@@ -27,12 +27,34 @@
     <meta name="twitter:title" content="Thimo Merke" />
     <meta
       name="twitter:description"
-      content="Independent researcher in business, sustainable finance and accounting, based in Mannheim, Germany."
+      content="Independent researcher in business, sustainable finance and accounting, based in Munich, Germany."
     />
     <meta name="twitter:image" content="https://thimo.me/thimo.png" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Thimo Merke</title>
+
+    <script>
+      // Set the theme before first paint so there is no flash of the wrong one.
+      (function () {
+        try {
+          var stored = window.localStorage.getItem('thimo-theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) {
+            meta.setAttribute('content', theme === 'light' ? '#f6f3ec' : '#07080b');
+          }
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

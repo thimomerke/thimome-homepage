@@ -1,91 +1,96 @@
 import React, { Component } from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import '../styles/Post.css'
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import '../styles/Post.css';
 
-let folder = "https://thimome-homepage.s3.eu-central-1.amazonaws.com/blog/" //change this to your own folder / aws bucket. this one will only work from my domain (thimo.me)
-//let folder = "/posts/"
+// Change this to your own folder / AWS bucket.
+// This one will only work from my domain (thimo.me).
+const folder = 'https://thimome-homepage.s3.eu-central-1.amazonaws.com/blog/';
 
-let image = "";
-let headline = "# This is odd...";
-let date = "";
-let content = "### I'm not sure how you got here, did you take a wrong turn somewhere?";
-
+const FALLBACK = {
+  image: '',
+  headline: 'This is odd...',
+  date: '',
+  content: `### I'm not sure how you got here, did you take a wrong turn somewhere?`,
+};
 
 export default class Post extends Component {
-    constructor(props) {
-        super(props);
-     
-        this.state = {
-            image: "",
-            headline: "",
-            date: "",
-            content: "Loading..."
-        }
-    }
+  constructor(props) {
+    super(props);
 
-    async componentDidMount() {
-      const articleId = this.props.slug;
-      const file = `${folder}${articleId}.md`;
-      const response = await fetch(file);
-      var text = "";
-      if (response.ok === true){
-        text = await response.text();
-        text = text.split('\n');
-        image = text[0];
-        headline = text[1];
-        date = text[2];
-        text.splice(0,4);
-        content = text.join('\n');
+    this.state = {
+      image: '',
+      headline: '',
+      date: '',
+      content: 'Loading...',
+    };
+  }
+
+  async componentDidMount() {
+    const { slug, preview } = this.props;
+
+    try {
+      const response = await fetch(`${folder}${slug}.md`);
+      if (!response.ok) {
+        this.setState(FALLBACK);
+        return;
       }
 
-      if (this.props.preview){
+      // Post format: line 1 image URL, line 2 headline, line 3 date,
+      // line 4 blank, everything after that is the body.
+      const lines = (await response.text()).split('\n');
+      const image = lines[0];
+      const headline = lines[1];
+      const date = lines[2];
+      let content = lines.slice(4).join('\n');
+
+      if (preview) {
         content = content.split('\n').slice(0, 10).join('\n');
       }
 
-      this.setState({
-          image: image,
-          headline: headline,
-          content: content,
-          date: date
-      })
+      this.setState({ image, headline, date, content });
+    } catch (e) {
+      this.setState(FALLBACK);
+    }
   }
 
-    render() {
-        console.log(this.state)
-  return (
+  render() {
+    const { preview, slug } = this.props;
+    const { image, headline, date, content } = this.state;
+    const href = `/posts/${slug}`;
 
-    <div className="blogpost">
-      
-      <main className="main">
-      <section className="post">
-      <Container>
-        <Row className="post-image">
-        {this.props.preview 
-          ? <a href={'/posts/' + this.props.slug}><img src={this.state.image} alt="main header"/></a>
-          : <div><img src={this.state.image} alt="main header"/></div>
-        }
-        </Row>
-        <Row className="post-headline">
-        {this.props.preview 
-          ? <a href={'/posts/' + this.props.slug}>{this.state.headline}</a>
-          : this.state.headline
-        }
-        </Row>
-        <Row className="post-date">
-        {this.state.date}
-        </Row>
-        <Row className="post-content">
-          <div>
-            <ReactMarkdown children={this.state.content} remarkPlugins={[remarkGfm]} />
+    return (
+      <article className={`post ${preview ? 'is-preview' : ''}`}>
+        <div className={preview ? '' : 'shell'} id={preview ? undefined : 'content'}>
+          {image && (
+            <div className="post-image">
+              {preview ? (
+                <a href={href}>
+                  <img src={image} alt="" />
+                </a>
+              ) : (
+                <img src={image} alt="" />
+              )}
             </div>
-          </Row>
-      </Container>
-      </section>
-      </main>
-    </div>
-  )
-}
+          )}
+
+          <h2 className="post-headline">
+            {preview ? <a href={href}>{headline}</a> : headline}
+          </h2>
+
+          {date && <p className="post-date mono mono-sm">{date}</p>}
+
+          <div className="post-content">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          </div>
+
+          {preview && (
+            <a className="post-more mono mono-sm" href={href}>
+              Read more &rarr;
+            </a>
+          )}
+        </div>
+      </article>
+    );
+  }
 }
